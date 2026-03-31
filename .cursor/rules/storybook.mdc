@@ -1,0 +1,46 @@
+---
+description: Cómo crear stories en Navi-UI
+globs: src/components/**/*.stories.tsx
+alwaysApply: false
+---
+
+# Plantilla de Story
+```tsx
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from './Button'
+
+const meta: Meta<typeof Button> = {
+  title: 'Primitives/Button',
+  component: Button,
+  tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'ghost', 'destructive'],
+    },
+  },
+}
+export default meta
+type Story = StoryObj<typeof Button>
+
+export const Default: Story = { args: { children: 'Button' } }
+export const Loading: Story = { args: { children: 'Guardando...', loading: true } }
+export const Disabled: Story = { args: { children: 'Disabled', disabled: true } }
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex gap-2">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="destructive">Destructive</Button>
+    </div>
+  ),
+}
+```
+
+## Secciones requeridas en cada story
+- Default (estado base)
+- Todas las variantes juntas
+- Estados especiales (loading, disabled, error)
+- Controles de Storybook configurados en argTypes
+```

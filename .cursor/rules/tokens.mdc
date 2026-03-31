@@ -1,0 +1,17 @@
+---
+description: Design tokens disponibles en Navi-UI
+globs: src/**/*.tsx
+alwaysApply: true
+---
+
+# Tokens disponibles
+
+SIEMPRE usa tokens de `src/tokens/design-tokens.ts`.
+NUNCA hardcodees colores, spacing o radii.
+
+Los CSS Variables están definidos en src/theme/variables.css:
+--navi-color-primary, --navi-color-neutral, --navi-color-success,
+--navi-color-warning, --navi-color-destructive,
+--navi-radius-sm/md/lg, --navi-shadow-sm/md/lg
+
+Para Tailwind usa las clases: text-navi-primary, bg-navi-primary, etc.

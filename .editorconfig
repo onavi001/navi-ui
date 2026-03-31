@@ -1,0 +1,55 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{json,yaml,yml}]
+indent_size = 2
+```
+
+---
+
+## Cómo usar Copilot al máximo en este proyecto
+
+### Chat de Copilot (`Cmd+Shift+I` en VS Code)
+
+Estos son los prompts más eficientes:
+```
+# Crear componente nuevo
+@workspace Crea src/components/primitives/Button.tsx
+siguiendo las instrucciones de .github/copilot-instructions.md.
+Variantes: primary, secondary, ghost, destructive.
+Tamaños: sm, md, lg. Estado loading con Spinner inline.
+Crea también Button.stories.tsx y exporta desde index.ts.
+
+# Revisar accesibilidad
+@workspace Revisa #file:Button.tsx contra WCAG 2.2 AA.
+Lista todos los problemas encontrados con su solución.
+
+# Generar tests
+@workspace Genera el test completo para #file:Button.tsx
+usando Vitest + RTL. Cubre render, variantes, estados y ARIA.
+
+# Revisar un PR completo
+@workspace Revisa todos los archivos modificados en este
+branch contra las reglas de .github/copilot-instructions.md
+```
+
+### Referencias útiles en el chat
+```
+#file:Button.tsx          → referencia un archivo específico
+#codebase                 → busca en todo el proyecto
+@workspace                → contexto completo del repo
+/explain                  → explica código seleccionado
+/fix                      → corrige el error seleccionado
+/tests                    → genera tests del código seleccionado
+/doc                      → genera JSDoc del código seleccionado
+```

@@ -1,0 +1,32 @@
+---
+description: Reglas globales de Navi-UI
+globs: **/*
+alwaysApply: true
+---
+
+# Navi-UI — Reglas Globales
+
+## Stack
+- React 19 + TypeScript 5.8 strict
+- Tailwind CSS v4 con CSS Variables
+- Radix UI para primitivas accesibles
+- Vite 6 en modo library
+- Vitest + React Testing Library
+
+## Convenciones
+- Usa SIEMPRE `cn()` de `@/utils/cn` para clases
+- Componentes con `React.forwardRef` siempre
+- Props extendidas desde el elemento HTML nativo
+- Nombres de archivo: PascalCase → `Button.tsx`
+- Barrel exports en cada carpeta con `index.ts`
+- Commits: Conventional Commits (feat:, fix:, docs:)
+
+## Estructura de un componente
+Siempre en: src/components/{categoria}/{Nombre}.tsx
+Siempre acompañado de: {Nombre}.stories.tsx
+
+## Lo que NUNCA debes hacer
+- No uses `any`
+- No uses estilos inline
+- No uses `className` hardcodeado sin `cn()`
+- No olvides exportar desde index.ts
