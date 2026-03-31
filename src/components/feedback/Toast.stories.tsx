@@ -50,13 +50,13 @@ function ToastDemoPanel() {
         <Button size="sm" onClick={() => success('Guardado correctamente')}>
           Success
         </Button>
-        <Button size="sm" variant="destructive" onClick={() => error('Algo falló')}>
+        <Button size="sm" variant="destructive" onClick={() => error('Something went wrong')}>
           Error
         </Button>
         <Button size="sm" variant="secondary" onClick={() => warning('Revisa el formulario')}>
           Warning
         </Button>
-        <Button size="sm" variant="outline" onClick={() => info('Tip útil')}>
+        <Button size="sm" variant="outline" onClick={() => info('Useful tip')}>
           Info
         </Button>
         <Button
@@ -78,16 +78,16 @@ function ToastDemoPanel() {
             promise(
               new Promise<string>((resolve) => setTimeout(() => resolve('Datos'), 1200)),
               {
-                loading: 'Cargando…',
+                loading: 'Loading…',
                 success: (d: string) => `Listo: ${d}`,
-                error: 'Falló la promesa',
+                error: 'Promise failed',
               }
             )
           }
         >
           Promise
         </Button>
-        <Button size="sm" variant="outline" onClick={() => toast('Toast genérico')}>
+        <Button size="sm" variant="outline" onClick={() => toast('Generic toast')}>
           Generic
         </Button>
       </div>

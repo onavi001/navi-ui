@@ -60,7 +60,7 @@ export const AllVariants: Story = {
 export const LoadingDisabled: Story = {
   render: () => (
     <div className="flex flex-wrap gap-2">
-      <IconButton loading aria-label="Cargando">
+      <IconButton loading aria-label="Loading">
         <BookmarkIcon />
       </IconButton>
       <IconButton disabled aria-label="Deshabilitado">

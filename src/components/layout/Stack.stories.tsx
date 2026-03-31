@@ -49,8 +49,8 @@ export const AllVariants: Story = {
       </Stack>
       <Stack direction="vertical" dividers>
         <Row label="Con divisores" />
-        <Row label="Entre ítems" />
-        <Row label="Último" />
+        <Row label="Between items" />
+        <Row label="Last" />
       </Stack>
     </div>
   ),

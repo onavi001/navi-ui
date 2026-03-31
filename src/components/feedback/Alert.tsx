@@ -10,7 +10,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
   icon?: React.ReactNode
   dismissible?: boolean
-  /** Se llama al cerrar cuando `dismissible` está activo. */
+  /** Called when closing when `dismissible` is active. */
   onDismiss?: () => void
 }
 

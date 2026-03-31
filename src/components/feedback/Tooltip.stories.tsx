@@ -82,7 +82,7 @@ export const Dark: Story = {
     ),
   ],
   render: () => (
-    <Tooltip content="Tooltip en tema oscuro">
+    <Tooltip content="Tooltip in dark theme">
       <Button variant="outline">Hover</Button>
     </Tooltip>
   ),

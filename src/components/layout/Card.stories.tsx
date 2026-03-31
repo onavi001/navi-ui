@@ -19,14 +19,14 @@ export const Default: Story = {
   render: () => (
     <Card className="max-w-md">
       <Card.Header>
-        <Card.Title>Título</Card.Title>
-        <Card.Description>Descripción breve del bloque.</Card.Description>
+        <Card.Title>Title</Card.Title>
+        <Card.Description>Brief description of the card block.</Card.Description>
       </Card.Header>
       <Card.Content>
         <p className="text-sm text-navi-neutral/90">Contenido principal.</p>
       </Card.Content>
       <Card.Footer>
-        <Button size="sm">Acción</Button>
+        <Button size="sm">Action</Button>
       </Card.Footer>
     </Card>
   ),
@@ -65,7 +65,7 @@ export const LoadingDisabled: Story = {
   render: () => (
     <Card className="max-w-md">
       <Card.Header>
-        <Card.Title>Confirmación</Card.Title>
+        <Card.Title>Confirmation</Card.Title>
       </Card.Header>
       <Card.Footer className="gap-2">
         <Button variant="outline" size="sm" disabled>
@@ -94,7 +94,7 @@ export const Dark: Story = {
     <Card variant="bordered" className="max-w-md">
       <Card.Header>
         <Card.Title>Tarjeta oscura</Card.Title>
-        <Card.Description>Variables del tema.</Card.Description>
+        <Card.Description>Theme variables.</Card.Description>
       </Card.Header>
       <Card.Content className="text-sm text-navi-neutral/90">Contenido.</Card.Content>
     </Card>

@@ -29,7 +29,7 @@ export const AllVariants: Story = {
 }
 
 export const LoadingState: Story = {
-  render: () => <Spinner aria-label="Cargando datos" />,
+  render: () => <Spinner aria-label="Loading data" />,
 }
 
 export const Dark: Story = {

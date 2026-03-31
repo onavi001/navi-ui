@@ -4,7 +4,7 @@ import { cn } from '@/utils/cn'
 
 export interface SeparatorProps
   extends React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root> {
-  /** Orientación visual del separador. */
+  /** Visual orientation of the separator. */
   orientation?: 'horizontal' | 'vertical'
   /** Si es puramente decorativo para lectores de pantalla. */
   decorative?: boolean

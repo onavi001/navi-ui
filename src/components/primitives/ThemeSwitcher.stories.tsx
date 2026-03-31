@@ -8,7 +8,7 @@ const meta: Meta<typeof ThemeSwitcher> = {
   argTypes: {
     showLabel: {
       control: 'boolean',
-      description: 'Mostrar etiqueta de texto junto al ícono',
+      description: 'Show text label next to the icon',
     },
   },
 }
@@ -32,10 +32,10 @@ export const InCard: Story = {
     <div className="rounded-navi-lg border border-navi-border dark:border-navi-border-dark bg-navi-surface dark:bg-navi-surface-hover p-6 space-y-4">
       <div>
         <h2 className="text-lg font-semibold text-navi-ink dark:text-navi-neutral-light mb-3">
-          Tema
+          Theme
         </h2>
         <p className="text-sm text-navi-neutral dark:text-navi-neutral-light mb-4">
-          Haz clic para cambiar entre modo claro y oscuro
+          Click to toggle between light and dark mode
         </p>
         <ThemeSwitcher />
       </div>
@@ -48,15 +48,15 @@ export const WithOtherElements: Story = {
     <div className="rounded-navi-lg border border-navi-border dark:border-navi-border-dark bg-navi-surface dark:bg-navi-surface-hover p-6 space-y-4">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold text-navi-ink dark:text-navi-neutral-light">
-          Configuración de Apariencia
+          Appearance Configuration
         </h2>
         <ThemeSwitcher showLabel={false} />
       </div>
       <hr className="border-navi-border dark:border-navi-border-dark" />
       <div className="space-y-2 text-sm text-navi-neutral dark:text-navi-neutral-light">
-        <p>• Tema automático: detecta preferencia del sistema</p>
-        <p>• Tema guardado: persiste en localStorage</p>
-        <p>• Cambio instantáneo: sin recarga de página</p>
+        <p>• Automatic theme: detects system preference</p>
+        <p>• Saved theme: persists in localStorage</p>
+        <p>• Instant switch: no page reload</p>
       </div>
     </div>
   ),

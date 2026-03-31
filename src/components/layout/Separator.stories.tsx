@@ -68,7 +68,7 @@ export const Dark: Story = {
     <div className="w-64 space-y-4 text-navi-neutral">
       <p className="text-sm">Contenido</p>
       <Separator />
-      <p className="text-sm">Más contenido</p>
+      <p className="text-sm">More content</p>
     </div>
   ),
 }

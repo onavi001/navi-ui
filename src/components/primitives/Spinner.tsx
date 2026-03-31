@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { cn } from '@/utils/cn'
 
-/** Tamaños disponibles para el indicador de carga. */
+/** Available sizes for the loading indicator. */
 export type SpinnerSize = 'sm' | 'md' | 'lg'
 
 export interface SpinnerProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Escala visual del spinner. */
   size?: SpinnerSize
-  /** Texto accesible; por defecto anuncia “Cargando”. */
+  /** Accessible text; defaults to "Loading". */
   'aria-label'?: string
 }
 
@@ -18,7 +18,7 @@ const sizeStyles: Record<SpinnerSize, string> = {
 }
 
 const Spinner = React.forwardRef<HTMLSpanElement, SpinnerProps>(
-  ({ className, size = 'md', 'aria-label': ariaLabel = 'Cargando', ...props }, ref) => (
+  ({ className, size = 'md', 'aria-label': ariaLabel = 'Loading', ...props }, ref) => (
     <span
       ref={ref}
       role="status"

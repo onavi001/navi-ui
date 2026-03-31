@@ -16,7 +16,7 @@ export default meta
 type Story = StoryObj<typeof Label>
 
 export const Default: Story = {
-  args: { children: 'Correo electrónico', htmlFor: 'email' },
+  args: { children: 'Email address', htmlFor: 'email' },
 }
 
 export const AllVariants: Story = {
@@ -31,7 +31,7 @@ export const AllVariants: Story = {
 }
 
 export const Required: Story = {
-  args: { children: 'Nombre', required: true, htmlFor: 'name' },
+  args: { children: 'Name', required: true, htmlFor: 'name' },
 }
 
 export const Dark: Story = {
@@ -47,7 +47,7 @@ export const Dark: Story = {
   ],
   render: () => (
     <Label htmlFor="dark-field" required>
-      Campo en modo oscuro
+      Field in dark mode
     </Label>
   ),
 }

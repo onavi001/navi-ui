@@ -14,8 +14,8 @@ const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
       <button
         ref={ref}
         onClick={toggleTheme}
-        aria-label={`Cambiar a ${theme === 'light' ? 'dark' : 'light'} mode`}
-        title={`Cambiar a ${theme === 'light' ? 'oscuro' : 'claro'}`}
+        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
         className={cn(
           'inline-flex items-center justify-center gap-2 rounded-navi-md px-3 py-2',
           'transition-all duration-200',
@@ -57,7 +57,7 @@ const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
             />
           </svg>
         )}
-        {showLabel && <span className="text-sm font-medium">{theme === 'light' ? 'Oscuro' : 'Claro'}</span>}
+        {showLabel && <span className="text-sm font-medium">{theme === 'light' ? 'Dark' : 'Light'}</span>}
       </button>
     )
   }

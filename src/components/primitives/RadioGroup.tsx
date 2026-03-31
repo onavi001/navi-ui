@@ -15,7 +15,7 @@ export interface RadioGroupProps
     'children'
   > {
   options: RadioOption[]
-  /** Disposición de las opciones. */
+  /** Arrangement of options. */
   orientation?: 'horizontal' | 'vertical'
 }
 

@@ -38,10 +38,10 @@ export const AllColors: Story = {
           <ThemeSwitcher showLabel={true} />
         </div>
 
-        {/* Colores Semánticos desde design-tokens */}
+        {/* Semantic Colors from design-tokens */}
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-navi-ink">
-            Colores Semánticos (Design Tokens)
+            Semantic Colors (Design Tokens)
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {semanticColors.map(({ name, class: className }) => (
@@ -75,7 +75,7 @@ export const AllColors: Story = {
         {/* Componentes */}
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-navi-ink">
-            Componentes en Acción
+            Components in Action
           </h2>
           <div className="flex flex-wrap gap-2">
             <Button variant="primary">Primary</Button>

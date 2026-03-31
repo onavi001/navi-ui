@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Checkbox>
 
 export const Default: Story = {
   args: {
-    label: 'Acepto los términos',
+    label: 'I accept the terms',
     helperText: 'Debes marcar esta casilla para continuar.',
   },
 }
@@ -32,7 +32,7 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex max-w-md flex-col gap-4">
       <Checkbox label="Sin error" defaultChecked />
-      <Checkbox label="Con mensaje de error" errorMessage="Selección obligatoria." />
+      <Checkbox label="With error message" errorMessage="Selection is required." />
       <Checkbox label="Deshabilitado" disabled defaultChecked />
     </div>
   ),
@@ -62,5 +62,5 @@ export const Dark: Story = {
       </div>
     ),
   ],
-  render: () => <Checkbox label="Opción" defaultChecked />,
+  render: () => <Checkbox label="Option" defaultChecked />,
 }

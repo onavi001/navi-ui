@@ -5,7 +5,7 @@ import { Button, type ButtonProps, type ButtonSize } from './Button'
 export interface IconButtonProps
   extends Omit<ButtonProps, 'leftIcon' | 'rightIcon' | 'children' | 'aria-label'>,
     Required<Pick<ButtonProps, 'aria-label'>> {
-  /** Ícono único mostrado en el botón. */
+  /** Single icon displayed in the button. */
   children: React.ReactNode
 }
 

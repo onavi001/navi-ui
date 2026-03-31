@@ -1,7 +1,7 @@
 import { toast as sonnerToast } from 'sonner'
 
 /**
- * Hook con API de toasts basada en Sonner (success, error, warning, info, loading, promise).
+ * Hook with Sonner-based toast API (success, error, warning, info, loading, promise).
  */
 export function useToast() {
   return {

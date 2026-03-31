@@ -6,7 +6,7 @@ export type InputVariant = 'default' | 'error' | 'success'
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  /** Variante visual según validación. */
+  /** Visual variant based on validation state. */
   variant?: InputVariant
   /** Texto del label asociado al campo. */
   label?: string
@@ -14,9 +14,9 @@ export interface InputProps
   helperText?: string
   /** Mensaje de error; prioriza la variante `error` y se muestra con `role="alert"`. */
   errorMessage?: string
-  /** Contenido a la izquierda del input (p. ej. prefijo o ícono). */
+  /** Content to the left of the input (e.g. prefix or icon). */
   leftAddon?: React.ReactNode
-  /** Contenido a la derecha del input (p. ej. sufijo o acción). */
+  /** Content to the right of the input (e.g. suffix or action). */
   rightAddon?: React.ReactNode
 }
 

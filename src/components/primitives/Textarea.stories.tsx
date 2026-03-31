@@ -26,7 +26,7 @@ export const Default: Story = {
   args: {
     label: 'Comentario',
     placeholder: 'Escribe un comentario breve.',
-    helperText: 'Máximo 500 caracteres.',
+    helperText: 'Maximum 500 characters.',
   },
 }
 
@@ -34,10 +34,10 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex max-w-md flex-col gap-6">
       <Textarea label="Default" placeholder="Texto" />
-      <Textarea label="Éxito" variant="success" placeholder="OK" />
+      <Textarea label="Success" variant="success" placeholder="OK" />
       <Textarea
         label="Error"
-        errorMessage="No puede estar vacío."
+        errorMessage="Cannot be empty."
         placeholder="Requerido"
       />
     </div>
@@ -48,7 +48,7 @@ export const AutoResize: Story = {
   args: {
     label: 'Nota auto-ajustable',
     autoResize: true,
-    defaultValue: 'Línea 1\nLínea 2\nLínea 3',
+    defaultValue: 'Line 1\nLine 2\nLine 3',
   },
 }
 
@@ -73,7 +73,7 @@ export const Dark: Story = {
   ],
   render: () => (
     <div className="max-w-md">
-      <Textarea label="Descripción" placeholder="Detalle" />
+      <Textarea label="Description" placeholder="Details" />
     </div>
   ),
 }

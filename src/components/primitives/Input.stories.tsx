@@ -26,8 +26,8 @@ type Story = StoryObj<typeof Input>
 export const Default: Story = {
   args: {
     label: 'Correo',
-    placeholder: 'nombre@empresa.com',
-    helperText: 'Te enviaremos la confirmación aquí.',
+    placeholder: 'user@company.com',
+    helperText: 'We will send you the confirmation here.',
   },
 }
 
@@ -35,12 +35,12 @@ export const AllVariants: Story = {
   render: () => (
     <div className="flex max-w-md flex-col gap-6">
       <Input label="Default" placeholder="Texto" />
-      <Input label="Éxito" variant="success" placeholder="Validado" />
+      <Input label="Success" variant="success" placeholder="Validated" />
       <Input
         label="Error"
         variant="error"
         errorMessage="Este campo es obligatorio."
-        placeholder="Vacío"
+        placeholder="Empty"
       />
     </div>
   ),
@@ -63,7 +63,7 @@ export const Disabled: Story = {
   args: {
     label: 'Solo lectura',
     disabled: true,
-    placeholder: 'No editable',
+    placeholder: 'Disabled input',
   },
 }
 

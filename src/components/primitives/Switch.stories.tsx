@@ -30,7 +30,7 @@ export const Default: Story = {
 export const AllVariants: Story = {
   render: () => (
     <div className="flex max-w-md flex-col gap-6">
-      <Switch label="Pequeño" size="sm" defaultChecked />
+      <Switch label="Small" size="sm" defaultChecked />
       <Switch label="Mediano" size="md" defaultChecked />
       <Switch label="Grande" size="lg" defaultChecked />
     </div>
@@ -57,5 +57,5 @@ export const Dark: Story = {
       </div>
     ),
   ],
-  render: () => <Switch label="Modo oscuro" defaultChecked />,
+  render: () => <Switch label="Dark mode" defaultChecked />,
 }

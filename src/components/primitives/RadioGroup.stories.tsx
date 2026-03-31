@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { RadioGroup } from './RadioGroup'
 
 const options = [
-  { label: 'Opción A', value: 'a' },
-  { label: 'Opción B', value: 'b' },
-  { label: 'Opción C (deshabilitada)', value: 'c', disabled: true },
+  { label: 'Option A', value: 'a' },
+  { label: 'Option B', value: 'b' },
+  { label: 'Option C (disabled)', value: 'c', disabled: true },
 ]
 
 const meta: Meta<typeof RadioGroup> = {

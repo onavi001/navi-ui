@@ -18,7 +18,7 @@ export type FlexAlign =
   | 'start'
   | 'end'
 
-/** Valores permitidos para `justify-content`. */
+/** Allowed values for `justify-content`. */
 export type FlexJustify =
   | 'flex-start'
   | 'flex-end'
@@ -29,10 +29,10 @@ export type FlexJustify =
   | 'start'
   | 'end'
 
-/** Valores permitidos para `flex-wrap`. */
+/** Allowed values for `flex-wrap`. */
 export type FlexWrap = 'nowrap' | 'wrap' | 'wrap-reverse'
 
-/** Espaciado uniforme entre ítems (mapeado a `gap` de Tailwind). */
+/** Uniform spacing between items (mapped to Tailwind's `gap`). */
 export type FlexGap = 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 
 export interface FlexProps extends React.HTMLAttributes<HTMLDivElement> {

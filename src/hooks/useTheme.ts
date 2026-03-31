@@ -3,13 +3,13 @@ import { useState } from 'react'
 export type Theme = 'light' | 'dark'
 
 /**
- * Hook para manejar el tema (light/dark mode)
- * Detecta automáticamente la preferencia del sistema
- * y persiste la selección del usuario en localStorage
+ * Hook to handle theme (light/dark mode)
+ * Automatically detects system preference
+ * and persists user selection in localStorage
  */
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Inicialización lazily
+    // Lazy initialization
     if (typeof window === 'undefined') return 'light'
     const htmlElement = document.documentElement
     return htmlElement.className === 'dark' ? 'dark' : 'light'

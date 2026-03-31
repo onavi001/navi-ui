@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { cn } from '@/utils/cn'
 
-/** Variantes visuales del badge. */
+/** Visual variants of the badge. */
 export type BadgeVariant =
   | 'default'
   | 'success'
@@ -10,7 +10,7 @@ export type BadgeVariant =
   | 'info'
   | 'outline'
 
-/** Tamaños del badge. */
+/** Badge sizes. */
 export type BadgeSize = 'sm' | 'md'
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {

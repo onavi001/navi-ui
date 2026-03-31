@@ -10,7 +10,7 @@ export interface TextareaProps
   label?: string
   helperText?: string
   errorMessage?: string
-  /** Ajusta la altura automáticamente al contenido. */
+  /** Automatically adjusts height to fit content. */
   autoResize?: boolean
 }
 
