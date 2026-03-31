@@ -1,32 +1,32 @@
-import * as React from 'react'
-import { cn } from '@/utils/cn'
-import { useTheme } from '@/hooks/useTheme'
+import * as React from "react";
+import { cn } from "@/utils/cn";
+import { useTheme } from "@/hooks/useTheme";
 
 export interface ThemeSwitcherProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  showLabel?: boolean
+  showLabel?: boolean;
 }
 
 const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
   ({ className, showLabel = true, ...props }, ref) => {
-    const { theme, toggleTheme } = useTheme()
+    const { theme, toggleTheme } = useTheme();
 
     return (
       <button
         ref={ref}
         onClick={toggleTheme}
-        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+        title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
         className={cn(
-          'inline-flex items-center justify-center gap-2 rounded-navi-md px-3 py-2',
-          'transition-all duration-200',
-          'bg-navi-primary/10 hover:bg-navi-primary/15 active:bg-navi-primary/20',
-          'text-navi-primary dark:text-navi-primary-light',
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary/50 focus-visible:ring-offset-2',
-          className
+          "inline-flex items-center justify-center gap-2 rounded-navi-md px-3 py-2",
+          "transition-all duration-200",
+          "bg-navi-primary/10 hover:bg-navi-primary/15 active:bg-navi-primary/20",
+          "text-navi-primary dark:text-navi-primary-light",
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary/50 focus-visible:ring-offset-2",
+          className,
         )}
         {...props}
       >
-        {theme === 'light' ? (
+        {theme === "light" ? (
           <svg
             className="size-5"
             fill="none"
@@ -57,11 +57,15 @@ const ThemeSwitcher = React.forwardRef<HTMLButtonElement, ThemeSwitcherProps>(
             />
           </svg>
         )}
-        {showLabel && <span className="text-sm font-medium">{theme === 'light' ? 'Dark' : 'Light'}</span>}
+        {showLabel && (
+          <span className="text-sm font-medium">
+            {theme === "light" ? "Dark" : "Light"}
+          </span>
+        )}
       </button>
-    )
-  }
-)
-ThemeSwitcher.displayName = 'ThemeSwitcher'
+    );
+  },
+);
+ThemeSwitcher.displayName = "ThemeSwitcher";
 
-export { ThemeSwitcher }
+export { ThemeSwitcher };

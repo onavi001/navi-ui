@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Button } from '@/components/primitives'
-import { ThemeSwitcher } from '@/components/primitives'
+import { ThemeSwitcher } from '@/components/theme'
 
 const meta: Meta = {
   title: 'Tokens/Test Colors',

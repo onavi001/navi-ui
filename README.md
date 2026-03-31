@@ -12,7 +12,7 @@
 ```
 
 **Enterprise-grade accessible React components**  
-*Built with React 19, TypeScript strict, Tailwind v4, and Radix UI primitives*
+_Built with React 19, TypeScript strict, Tailwind v4, and Radix UI primitives_
 
 <br/>
 
@@ -66,7 +66,7 @@ npm install -D tailwindcss@^4
 ## Quick Start
 
 ```tsx
-import { Button, Card, Badge } from '@navi-ui/react'
+import { Button, Card, Badge } from "@navi-ui/react";
 
 export default function Example() {
   return (
@@ -82,50 +82,60 @@ export default function Example() {
         <Button variant="primary">Get Started</Button>
       </Card.Footer>
     </Card>
-  )
+  );
 }
 ```
 
 ---
 
-## Components (19+)
+## Components (19)
 
 ### Primitives (10)
+
 Form controls and basic building blocks
 
-| Component | Features | Status |
-|---|---|---|
-| **Button** | 5 variants (primary, secondary, ghost, destructive, outline) + loading | ✅ |
-| **Input** | Error/success variants, helper text, left/right addons | ✅ |
-| **Label** | Associated with form controls, required marker | ✅ |
-| **Textarea** | Auto-resize option, variants, helper text | ✅ |
-| **Checkbox** | Indeterminate state, error handling, accessible | ✅ |
-| **RadioGroup** | Grouped radios with Radix UI, vertical/horizontal | ✅ |
-| **Switch** | Toggle with 3 size variants (sm, md, lg) | ✅ |
-| **IconButton** | Icon-only button with required aria-label | ✅ |
-| **Badge** | 6 variants (default, success, warning, destructive, info, outline) | ✅ |
-| **Spinner** | Loading indicator, 3 sizes | ✅ |
+| Component      | Features                                                               | Status |
+| -------------- | ---------------------------------------------------------------------- | ------ |
+| **Button**     | 5 variants (primary, secondary, ghost, destructive, outline) + loading | ✅     |
+| **Input**      | Error/success variants, helper text, left/right addons                 | ✅     |
+| **Label**      | Associated with form controls, required marker                         | ✅     |
+| **Textarea**   | Auto-resize option, variants, helper text                              | ✅     |
+| **Checkbox**   | Indeterminate state, error handling, accessible                        | ✅     |
+| **RadioGroup** | Grouped radios with Radix UI, vertical/horizontal                      | ✅     |
+| **Switch**     | Toggle with 3 size variants (sm, md, lg)                               | ✅     |
+| **IconButton** | Icon-only button with required aria-label                              | ✅     |
+| **Badge**      | 6 variants (default, success, warning, destructive, info, outline)     | ✅     |
+| **Spinner**    | Loading indicator, 3 sizes                                             | ✅     |
 
 ### Layout (5)
+
 Structural and composition components
 
-| Component | Features | Status |
-|---|---|---|
-| **Card** | Composable (Header/Content/Footer/Title/Description) | ✅ |
-| **Flex** | Flexbox utility (direction, align, justify, wrap, gap) | ✅ |
-| **Grid** | CSS Grid utility (auto columns, flow) | ✅ |
-| **Stack** | Stack (vertical/horizontal with gap) | ✅ |
-| **Separator** | Semantic divider (horizontal/vertical) | ✅ |
+| Component     | Features                                               | Status |
+| ------------- | ------------------------------------------------------ | ------ |
+| **Card**      | Composable (Header/Content/Footer/Title/Description)   | ✅     |
+| **Flex**      | Flexbox utility (direction, align, justify, wrap, gap) | ✅     |
+| **Grid**      | CSS Grid utility (auto columns, flow)                  | ✅     |
+| **Stack**     | Stack (vertical/horizontal with gap)                   | ✅     |
+| **Separator** | Semantic divider (horizontal/vertical)                 | ✅     |
 
-### Feedback (4)
+### Feedback (3)
+
 User notifications and feedback
 
-| Component | Features | Status |
-|---|---|---|
-| **Alert** | 4 variants (info, success, warning, destructive), dismissible | ✅ |
-| **Toast** | Toast notifications powered by sonner | ✅ |
-| **Tooltip** | Hover/focus triggered tooltips | ✅ |
-| **ThemeSwitcher** | Light/dark mode toggle with auto-detection | ✅ |
+| Component   | Features                                                      | Status |
+| ----------- | ------------------------------------------------------------- | ------ |
+| **Alert**   | 4 variants (info, success, warning, destructive), dismissible | ✅     |
+| **Toast**   | Toast notifications powered by sonner                         | ✅     |
+| **Tooltip** | Hover/focus triggered tooltips                                | ✅     |
+
+### Theme (1)
+
+Theme management and appearance
+
+| Component         | Features                                   | Status |
+| ----------------- | ------------------------------------------ | ------ |
+| **ThemeSwitcher** | Light/dark mode toggle with auto-detection | ✅     |
 
 ---
 
@@ -138,11 +148,11 @@ Navi-UI uses **CSS Variables + Tailwind v4** for a theming system that's both po
 ```css
 /* Light mode (default) */
 :root {
-  --navi-color-primary: 79 70 229;      /* indigo */
-  --navi-color-success: 34 197 94;      /* green */
-  --navi-color-warning: 234 179 8;      /* amber */
-  --navi-color-destructive: 239 68 68;  /* red */
-  --navi-color-neutral: 113 113 122;    /* zinc */
+  --navi-color-primary: 79 70 229; /* indigo */
+  --navi-color-success: 34 197 94; /* green */
+  --navi-color-warning: 234 179 8; /* amber */
+  --navi-color-destructive: 239 68 68; /* red */
+  --navi-color-neutral: 113 113 122; /* zinc */
   /* ... more colors ... */
 }
 
@@ -215,7 +225,7 @@ Dark mode is **automatic**. No configuration needed.
 
 ```tsx
 // The ThemeProvider handles everything
-import { ThemeProvider } from '@navi-ui/react'
+import { ThemeProvider } from "@navi-ui/react";
 
 export default function App() {
   return (
@@ -224,7 +234,7 @@ export default function App() {
       {/* And respects user's manual theme selection */}
       <YourApp />
     </ThemeProvider>
-  )
+  );
 }
 ```
 
@@ -237,32 +247,32 @@ All colors automatically switch when user prefers dark mode or when `.dark` clas
 100% typed with TypeScript 5.8 strict mode:
 
 ```tsx
-import { Button, ButtonProps } from '@navi-ui/react'
+import { Button, ButtonProps } from "@navi-ui/react";
 
 // Intellisense for all props
-<Button 
-  variant="primary"  // ✅ 'primary' | 'secondary' | 'ghost' | 'destructive' | 'outline'
-  size="md"          // ✅ 'sm' | 'md' | 'lg'
-  loading={true}     // ✅ boolean
+<Button
+  variant="primary" // ✅ 'primary' | 'secondary' | 'ghost' | 'destructive' | 'outline'
+  size="md" // ✅ 'sm' | 'md' | 'lg'
+  loading={true} // ✅ boolean
   onClick={handleClick} // ✅ () => void
 >
   Click me
-</Button>
+</Button>;
 ```
 
 ---
 
 ## Tech Stack
 
-| Technology | Version | Why |
-|---|---|---|
-| React | 19 | Latest features, concurrent rendering |
-| TypeScript | 5.8 strict | Type safety, `satisfies`, advanced types |
-| Vite | 6.x | Ultra-fast builds for libraries |
-| Tailwind CSS | 4.x | CSS variables + utilities, no overhead |
-| Radix UI | Latest | Headless, accessible primitives |
-| Storybook | 8.5+ | Component documentation & visual testing |
-| Vitest | Latest | Fast, modern testing framework |
+| Technology   | Version    | Why                                      |
+| ------------ | ---------- | ---------------------------------------- |
+| React        | 19         | Latest features, concurrent rendering    |
+| TypeScript   | 5.8 strict | Type safety, `satisfies`, advanced types |
+| Vite         | 6.x        | Ultra-fast builds for libraries          |
+| Tailwind CSS | 4.x        | CSS variables + utilities, no overhead   |
+| Radix UI     | Latest     | Headless, accessible primitives          |
+| Storybook    | 8.5+       | Component documentation & visual testing |
+| Vitest       | Latest     | Fast, modern testing framework           |
 
 **Zero additional runtime dependencies** (beyond React and Tailwind).
 
@@ -276,7 +286,8 @@ navi-ui/
 │   ├── components/
 │   │   ├── primitives/      # Button, Input, Label, Badge, Spinner…
 │   │   ├── layout/          # Card, Flex, Grid, Stack, Separator
-│   │   ├── feedback/        # Alert, Toast, Tooltip, ThemeSwitcher
+│   │   ├── feedback/        # Alert, Toast, Tooltip
+│   │   ├── theme/           # ThemeSwitcher
 │   │   └── index.ts         # Barrel exports
 │   ├── hooks/               # useToast, useTheme, etc.
 │   ├── tokens/              # Design tokens, color definitions
@@ -323,6 +334,7 @@ npm run typecheck
 ```
 
 **PR Checklist:**
+
 - [ ] Component is 100% TypeScript typed
 - [ ] Storybook stories cover all states
 - [ ] Tests pass (85%+ coverage)

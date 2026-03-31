@@ -1,31 +1,31 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-import { ThemeSwitcher } from './ThemeSwitcher'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const meta: Meta<typeof ThemeSwitcher> = {
-  title: 'Primitives/ThemeSwitcher',
+  title: "Theme/ThemeSwitcher",
   component: ThemeSwitcher,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     showLabel: {
-      control: 'boolean',
-      description: 'Show text label next to the icon',
+      control: "boolean",
+      description: "Show text label next to the icon",
     },
   },
-}
-export default meta
-type Story = StoryObj<typeof ThemeSwitcher>
+};
+export default meta;
+type Story = StoryObj<typeof ThemeSwitcher>;
 
 export const Default: Story = {
   args: {
     showLabel: true,
   },
-}
+};
 
 export const IconOnly: Story = {
   args: {
     showLabel: false,
   },
-}
+};
 
 export const InCard: Story = {
   render: () => (
@@ -41,7 +41,7 @@ export const InCard: Story = {
       </div>
     </div>
   ),
-}
+};
 
 export const WithOtherElements: Story = {
   render: () => (
@@ -60,4 +60,4 @@ export const WithOtherElements: Story = {
       </div>
     </div>
   ),
-}
+};
