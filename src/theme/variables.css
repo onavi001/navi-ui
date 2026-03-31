@@ -1,0 +1,94 @@
+/* ============================================
+   Paleta: Indigo + Zinc (Light Mode)
+   ============================================ */
+:root {
+  /* Colores principales */
+  --navi-color-primary: 79 70 229; /* indigo-600 */
+  --navi-color-primary-light: 102 126 234; /* indigo-500 */
+  --navi-color-primary-dark: 55 48 163; /* indigo-700 */
+  
+  /* Neutro base (Zinc) */
+  --navi-color-neutral: 113 113 122; /* zinc-600 */
+  --navi-color-neutral-light: 161 161 170; /* zinc-400 */
+  --navi-color-neutral-dark: 39 39 42; /* zinc-900 */
+  
+  /* Estados semánticos */
+  --navi-color-success: 34 197 94; /* green-500 */
+  --navi-color-success-light: 74 222 128; /* green-400 para dark mode */
+  --navi-color-warning: 234 179 8; /* amber-500 */
+  --navi-color-warning-light: 250 204 21; /* amber-400 para dark mode */
+  --navi-color-destructive: 239 68 68; /* red-500 */
+  --navi-color-destructive-dark: 220 38 38; /* red-600 para hover en light mode */
+  --navi-color-destructive-light: 248 113 113; /* red-400 para dark mode */
+  --navi-color-info: 59 130 246; /* blue-500 */
+  --navi-color-info-light: 96 165 250; /* blue-400 para dark mode */
+
+  /* Superficies y composición */
+  --navi-color-surface: 255 255 255; /* blanco puro */
+  --navi-color-surface-hover: 250 250 250; /* zinc-50 */
+  --navi-color-surface-active: 244 244 245; /* zinc-100 */
+  --navi-color-overlay: 24 24 27; /* zinc-900 */
+  --navi-color-overlay-light: 39 39 42; /* zinc-800 */
+  --navi-color-ink: 39 39 42; /* zinc-900 */
+  --navi-color-border: 228 228 231; /* zinc-200 */
+  --navi-color-border-dark: 212 212 216; /* zinc-300 */
+  --navi-color-inverse: 255 255 255;
+
+  /* Tipografía global */
+  --navi-font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --navi-font-mono: ui-monospace, Consolas, monospace;
+
+  /* Espaciado angular */
+  --navi-radius-sm: 0.375rem;
+  --navi-radius-md: 0.5rem;
+  --navi-radius-lg: 0.75rem;
+  
+  /* Sombras (light mode) */
+  --navi-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --navi-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --navi-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+  --navi-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+}
+
+/* ============================================
+   Paleta: Indigo + Zinc (Dark Mode)
+   ============================================ */
+.dark {
+  /* Colores principales (ajustados para mejor contraste en dark) */
+  --navi-color-primary: 129 140 248; /* indigo-400 */
+  --navi-color-primary-light: 165 180 252; /* indigo-300 */
+  --navi-color-primary-dark: 102 126 234; /* indigo-500 */
+  
+  /* Neutro base (Zinc dark) */
+  --navi-color-neutral: 212 212 216; /* zinc-300 */
+  --navi-color-neutral-light: 244 244 245; /* zinc-100 */
+  --navi-color-neutral-dark: 161 161 170; /* zinc-400 */
+  
+  /* Estados semánticos (ajustados para dark) */
+  --navi-color-success: 74 222 128; /* green-400 */
+  --navi-color-success-light: 134 239 172; /* green-300 para más contraste */
+  --navi-color-warning: 250 204 21; /* amber-400 */
+  --navi-color-warning-light: 253 230 138; /* amber-300 para más contraste */
+  --navi-color-destructive: 248 113 113; /* red-400 */
+  --navi-color-destructive-dark: 239 68 68; /* red-500 para dark mode hover */
+  --navi-color-destructive-light: 252 165 165; /* red-300 para más contraste */
+  --navi-color-info: 96 165 250; /* blue-400 */
+  --navi-color-info-light: 147 197 253; /* blue-300 para más contraste */
+
+  /* Superficies y composición (dark) */
+  --navi-color-surface: 27 27 30; /* zinc-950 - fondo principal */
+  --navi-color-surface-hover: 39 39 42; /* zinc-900 */
+  --navi-color-surface-active: 52 52 56; /* zinc-800 */
+  --navi-color-overlay: 255 255 255; /* blanco puro para overlays */
+  --navi-color-overlay-light: 244 244 245; /* zinc-100 */
+  --navi-color-ink: 228 228 231; /* zinc-200 para contraste */
+  --navi-color-border: 63 63 70; /* zinc-700 */
+  --navi-color-border-dark: 82 82 89; /* zinc-600 */
+  --navi-color-inverse: 27 27 30;
+
+  /* Sombras (dark mode - más pronunciadas) */
+  --navi-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+  --navi-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+  --navi-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.6), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+  --navi-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.6), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+}

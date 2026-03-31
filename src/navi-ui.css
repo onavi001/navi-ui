@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+@import './theme/variables.css';
+
+html {
+  font: 18px/145% var(--navi-font-sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(var(--navi-color-surface));
+  color: rgb(var(--navi-color-ink));
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@keyframes navi-alert-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navi-spinner-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  /* Navi Color Utilities */
+  .bg-navi-primary { background-color: rgb(var(--navi-color-primary)); }
+  .bg-navi-primary-light { background-color: rgb(var(--navi-color-primary-light)); }
+  .bg-navi-primary-dark { background-color: rgb(var(--navi-color-primary-dark)); }
+  .bg-navi-neutral { background-color: rgb(var(--navi-color-neutral)); }
+  .bg-navi-neutral-light { background-color: rgb(var(--navi-color-neutral-light)); }
+  .bg-navi-neutral-dark { background-color: rgb(var(--navi-color-neutral-dark)); }
+  .bg-navi-success { background-color: rgb(var(--navi-color-success)); }
+  .bg-navi-success-light { background-color: rgb(var(--navi-color-success-light)); }
+  .bg-navi-warning { background-color: rgb(var(--navi-color-warning)); }
+  .bg-navi-warning-light { background-color: rgb(var(--navi-color-warning-light)); }
+  .bg-navi-destructive { background-color: rgb(var(--navi-color-destructive)); }
+  .bg-navi-destructive-dark { background-color: rgb(var(--navi-color-destructive-dark)); }
+  .bg-navi-destructive-light { background-color: rgb(var(--navi-color-destructive-light)); }
+  .bg-navi-info { background-color: rgb(var(--navi-color-info)); }
+  .bg-navi-info-light { background-color: rgb(var(--navi-color-info-light)); }
+  .bg-navi-surface { background-color: rgb(var(--navi-color-surface)); }
+  .bg-navi-surface-hover { background-color: rgb(var(--navi-color-surface-hover)); }
+  .bg-navi-surface-active { background-color: rgb(var(--navi-color-surface-active)); }
+  .bg-navi-border { background-color: rgb(var(--navi-color-border)); }
+  .bg-navi-overlay { background-color: rgb(var(--navi-color-overlay)); }
+  .bg-navi-ink { background-color: rgb(var(--navi-color-ink)); }
+
+  .text-navi-primary { color: rgb(var(--navi-color-primary)); }
+  .text-navi-primary-light { color: rgb(var(--navi-color-primary-light)); }
+  .text-navi-primary-dark { color: rgb(var(--navi-color-primary-dark)); }
+  .text-navi-neutral { color: rgb(var(--navi-color-neutral)); }
+  .text-navi-neutral-light { color: rgb(var(--navi-color-neutral-light)); }
+  .text-navi-success { color: rgb(var(--navi-color-success)); }
+  .text-navi-success-light { color: rgb(var(--navi-color-success-light)); }
+  .text-navi-warning { color: rgb(var(--navi-color-warning)); }
+  .text-navi-warning-light { color: rgb(var(--navi-color-warning-light)); }
+  .text-navi-destructive { color: rgb(var(--navi-color-destructive)); }
+  .text-navi-destructive-light { color: rgb(var(--navi-color-destructive-light)); }
+  .text-navi-info { color: rgb(var(--navi-color-info)); }
+  .text-navi-info-light { color: rgb(var(--navi-color-info-light)); }
+  .text-navi-ink { color: rgb(var(--navi-color-ink)); }
+  .text-navi-border { color: rgb(var(--navi-color-border)); }
+  .text-navi-inverse { color: rgb(var(--navi-color-inverse)); }
+
+  .border-navi-primary { border-color: rgb(var(--navi-color-primary)); }
+  .border-navi-success { border-color: rgb(var(--navi-color-success)); }
+  .border-navi-destructive { border-color: rgb(var(--navi-color-destructive)); }
+  .border-navi-border { border-color: rgb(var(--navi-color-border)); }
+  .border-navi-border-dark { border-color: rgb(var(--navi-color-border-dark)); }
+  .border-navi-inverse { border-color: rgb(var(--navi-color-inverse)); }
+
+  .rounded-navi-sm { border-radius: var(--navi-radius-sm); }
+  .rounded-navi-md { border-radius: var(--navi-radius-md); }
+  .rounded-navi-lg { border-radius: var(--navi-radius-lg); }
+}
