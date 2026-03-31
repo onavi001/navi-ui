@@ -32,7 +32,7 @@ body {
 }
 
 @layer utilities {
-  /* Navi Color Utilities */
+  /* Navi Color Utilities - Base */
   .bg-navi-primary { background-color: rgb(var(--navi-color-primary)); }
   .bg-navi-primary-light { background-color: rgb(var(--navi-color-primary-light)); }
   .bg-navi-primary-dark { background-color: rgb(var(--navi-color-primary-dark)); }
@@ -55,6 +55,20 @@ body {
   .bg-navi-overlay { background-color: rgb(var(--navi-color-overlay)); }
   .bg-navi-ink { background-color: rgb(var(--navi-color-ink)); }
 
+  /* Opacity variants for backgrounds */
+  .bg-navi-primary\/5 { background-color: rgb(var(--navi-color-primary) / 0.05); }
+  .bg-navi-primary\/10 { background-color: rgb(var(--navi-color-primary) / 0.1); }
+  .bg-navi-primary\/15 { background-color: rgb(var(--navi-color-primary) / 0.15); }
+  .bg-navi-primary\/30 { background-color: rgb(var(--navi-color-primary) / 0.3); }
+  .bg-navi-success\/5 { background-color: rgb(var(--navi-color-success) / 0.05); }
+  .bg-navi-success\/15 { background-color: rgb(var(--navi-color-success) / 0.15); }
+  .bg-navi-warning\/8 { background-color: rgb(var(--navi-color-warning) / 0.08); }
+  .bg-navi-warning\/15 { background-color: rgb(var(--navi-color-warning) / 0.15); }
+  .bg-navi-destructive\/5 { background-color: rgb(var(--navi-color-destructive) / 0.05); }
+  .bg-navi-destructive\/15 { background-color: rgb(var(--navi-color-destructive) / 0.15); }
+  .bg-navi-neutral\/10 { background-color: rgb(var(--navi-color-neutral) / 0.1); }
+
+  /* Text color utilities */
   .text-navi-primary { color: rgb(var(--navi-color-primary)); }
   .text-navi-primary-light { color: rgb(var(--navi-color-primary-light)); }
   .text-navi-primary-dark { color: rgb(var(--navi-color-primary-dark)); }
@@ -72,6 +86,12 @@ body {
   .text-navi-border { color: rgb(var(--navi-color-border)); }
   .text-navi-inverse { color: rgb(var(--navi-color-inverse)); }
 
+  /* Text opacity variants */
+  .text-navi-neutral\/50 { color: rgb(var(--navi-color-neutral) / 0.5); }
+  .text-navi-neutral\/60 { color: rgb(var(--navi-color-neutral) / 0.6); }
+  .text-navi-neutral\/70 { color: rgb(var(--navi-color-neutral) / 0.7); }
+
+  /* Border color utilities */
   .border-navi-primary { border-color: rgb(var(--navi-color-primary)); }
   .border-navi-success { border-color: rgb(var(--navi-color-success)); }
   .border-navi-destructive { border-color: rgb(var(--navi-color-destructive)); }
@@ -79,7 +99,183 @@ body {
   .border-navi-border-dark { border-color: rgb(var(--navi-color-border-dark)); }
   .border-navi-inverse { border-color: rgb(var(--navi-color-inverse)); }
 
+  /* Border opacity variants */
+  .border-navi-primary\/25 { border-color: rgb(var(--navi-color-primary) / 0.25); }
+  .border-navi-primary\/30 { border-color: rgb(var(--navi-color-primary) / 0.3); }
+  .border-navi-primary\/40 { border-color: rgb(var(--navi-color-primary) / 0.4); }
+  .border-navi-success\/25 { border-color: rgb(var(--navi-color-success) / 0.25); }
+  .border-navi-success\/40 { border-color: rgb(var(--navi-color-success) / 0.4); }
+  .border-navi-warning\/30 { border-color: rgb(var(--navi-color-warning) / 0.3); }
+  .border-navi-warning\/40 { border-color: rgb(var(--navi-color-warning) / 0.4); }
+  .border-navi-destructive\/25 { border-color: rgb(var(--navi-color-destructive) / 0.25); }
+  .border-navi-destructive\/30 { border-color: rgb(var(--navi-color-destructive) / 0.3); }
+  .border-navi-destructive\/40 { border-color: rgb(var(--navi-color-destructive) / 0.4); }
+  .border-navi-neutral\/10 { border-color: rgb(var(--navi-color-neutral) / 0.1); }
+  .border-navi-neutral\/20 { border-color: rgb(var(--navi-color-neutral) / 0.2); }
+
+  /* Border radius utilities */
   .rounded-navi-sm { border-radius: var(--navi-radius-sm); }
   .rounded-navi-md { border-radius: var(--navi-radius-md); }
   .rounded-navi-lg { border-radius: var(--navi-radius-lg); }
+
+  /* Ring utilities for focus states */
+  .focus-visible\:ring-navi-primary { --tw-ring-color: rgb(var(--navi-color-primary)); }
+  .focus-visible\:ring-navi-primary\/30 { --tw-ring-color: rgb(var(--navi-color-primary) / 0.3); }
+  .focus-visible\:ring-navi-primary\/50 { --tw-ring-color: rgb(var(--navi-color-primary) / 0.5); }
+  .focus-visible\:ring-navi-destructive\/30 { --tw-ring-color: rgb(var(--navi-color-destructive) / 0.3); }
+  .focus-visible\:ring-navi-destructive\/50 { --tw-ring-color: rgb(var(--navi-color-destructive) / 0.5); }
+  .focus-visible\:ring-navi-success\/30 { --tw-ring-color: rgb(var(--navi-color-success) / 0.3); }
+  .focus-visible\:ring-navi-success\/50 { --tw-ring-color: rgb(var(--navi-color-success) / 0.5); }
+  .focus-visible\:ring-offset-navi-surface { --tw-ring-offset-color: rgb(var(--navi-color-surface)); }
+
+  /* Placeholder utilities */
+  .placeholder\:text-navi-neutral\/50 { color: rgb(var(--navi-color-neutral) / 0.5); }
+  .placeholder\:text-navi-neutral\/60 { color: rgb(var(--navi-color-neutral) / 0.6); }
+
+  /* Focus within utilities */
+  .focus-within\:border-navi-primary { border-color: rgb(var(--navi-color-primary)); }
+  .focus-within\:ring-navi-primary\/20 { --tw-ring-color: rgb(var(--navi-color-primary) / 0.2); }
+  .focus-within\:ring-navi-primary\/30 { --tw-ring-color: rgb(var(--navi-color-primary) / 0.3); }
+  .focus-within\:ring-navi-primary\/50 { --tw-ring-color: rgb(var(--navi-color-primary) / 0.5); }
+  .focus-within\:ring-navi-success\/25 { --tw-ring-color: rgb(var(--navi-color-success) / 0.25); }
+  .focus-within\:ring-navi-success\/30 { --tw-ring-color: rgb(var(--navi-color-success) / 0.3); }
+  .focus-within\:ring-navi-success\/50 { --tw-ring-color: rgb(var(--navi-color-success) / 0.5); }
+  .focus-within\:ring-navi-destructive\/25 { --tw-ring-color: rgb(var(--navi-color-destructive) / 0.25); }
+  .focus-within\:ring-navi-destructive\/30 { --tw-ring-color: rgb(var(--navi-color-destructive) / 0.3); }
+  .focus-within\:ring-navi-destructive\/50 { --tw-ring-color: rgb(var(--navi-color-destructive) / 0.5); }
+  .focus-within\:border-navi-destructive { border-color: rgb(var(--navi-color-destructive)); }
+  .focus-within\:border-navi-success { border-color: rgb(var(--navi-color-success)); }
+
+  /* Hover utilities */
+  .hover\:bg-navi-neutral\/10 { background-color: rgb(var(--navi-color-neutral) / 0.1); }
+  .hover\:text-navi-neutral { color: rgb(var(--navi-color-neutral)); }
+  .hover\:bg-navi-primary\/10 { background-color: rgb(var(--navi-color-primary) / 0.1); }
+  .hover\:bg-navi-surface-hover { background-color: rgb(var(--navi-color-surface-hover)); }
+  .hover\:text-navi-primary { color: rgb(var(--navi-color-primary)); }
+  .hover\:bg-navi-primary-dark { background-color: rgb(var(--navi-color-primary-dark)); }
+  .hover\:bg-navi-destructive-dark { background-color: rgb(var(--navi-color-destructive-dark)); }
+  .hover\:bg-navi-neutral\/20 { background-color: rgb(var(--navi-color-neutral) / 0.2); }
+  .hover\:shadow-navi-md { box-shadow: var(--navi-shadow-md); }
+
+  /* Active utilities */
+  .active\:bg-navi-primary-dark { background-color: rgb(var(--navi-color-primary-dark)); }
+  .active\:bg-navi-neutral\/25 { background-color: rgb(var(--navi-color-neutral) / 0.25); }
+  .active\:bg-navi-neutral\/15 { background-color: rgb(var(--navi-color-neutral) / 0.15); }
+  .active\:bg-navi-surface-active { background-color: rgb(var(--navi-color-surface-active)); }
+  .active\:bg-navi-destructive-dark { background-color: rgb(var(--navi-color-destructive-dark)); }
+  .active\:bg-navi-primary\/20 { background-color: rgb(var(--navi-color-primary) / 0.2); }
+
+  /* Dark mode variants */
+  .dark .dark\:bg-navi-surface-hover { background-color: rgb(var(--navi-color-surface-hover)); }
+  .dark .dark\:bg-navi-primary-light { background-color: rgb(var(--navi-color-primary-light)); }
+  .dark .dark\:border-navi-border-dark { border-color: rgb(var(--navi-color-border-dark)); }
+  .dark .dark\:text-navi-neutral-light { color: rgb(var(--navi-color-neutral-light)); }
+  .dark .dark\:text-navi-primary-light { color: rgb(var(--navi-color-primary-light)); }
+  .dark .dark\:text-navi-success-light { color: rgb(var(--navi-color-success-light)); }
+  .dark .dark\:text-navi-warning-light { color: rgb(var(--navi-color-warning-light)); }
+  .dark .dark\:text-navi-destructive-light { color: rgb(var(--navi-color-destructive-light)); }
+  .dark .dark\:placeholder\:text-navi-neutral\/50 { color: rgb(var(--navi-color-neutral) / 0.5); }
+  .dark .dark\:placeholder\:text-navi-neutral\/60 { color: rgb(var(--navi-color-neutral) / 0.6); }
+  .dark .dark\:focus-visible\:ring-offset-navi-surface { --tw-ring-offset-color: rgb(var(--navi-color-surface)); }
+  .dark .dark\:focus-within\:ring-navi-primary\/50 { --tw-ring-color: rgb(var(--navi-color-primary) / 0.5); }
+  .dark .dark\:focus-within\:border-navi-primary { border-color: rgb(var(--navi-color-primary)); }
+
+  /* Dark mode opacity variants */
+  .dark .dark\:border-navi-primary\/40 { border-color: rgb(var(--navi-color-primary) / 0.4); }
+  .dark .dark\:border-navi-success\/40 { border-color: rgb(var(--navi-color-success) / 0.4); }
+  .dark .dark\:border-navi-warning\/40 { border-color: rgb(var(--navi-color-warning) / 0.4); }
+  .dark .dark\:border-navi-destructive\/40 { border-color: rgb(var(--navi-color-destructive) / 0.4); }
+  .dark .dark\:bg-navi-primary\/15 { background-color: rgb(var(--navi-color-primary) / 0.15); }
+  .dark .dark\:bg-navi-success\/15 { background-color: rgb(var(--navi-color-success) / 0.15); }
+  .dark .dark\:bg-navi-warning\/15 { background-color: rgb(var(--navi-color-warning) / 0.15); }
+  .dark .dark\:bg-navi-destructive\/15 { background-color: rgb(var(--navi-color-destructive) / 0.15); }
+  .dark .dark\:border-navi-neutral\/20 { border-color: rgb(var(--navi-color-neutral) / 0.2); }
+
+  /* Data attribute selectors for component states */
+  [data-state=checked] { --data-state: checked; }
+  [data-state=indeterminate] { --data-state: indeterminate; }
+
+  /* Group data selectors */
+  .group-data-\[state\=checked\]\:block:is(:where(.group)[data-state=checked] *) { display: block; }
+  .group-data-\[state\=indeterminate\]\:block:is(:where(.group)[data-state=indeterminate] *) { display: block; }
+
+  /* Attribute selectors for data-state */
+  [data-state="checked"] {
+    --checked-border: rgb(var(--navi-color-primary));
+    --checked-bg: rgb(var(--navi-color-primary));
+  }
+
+  [data-state="checked"].dark,
+  .dark [data-state="checked"] {
+    --checked-bg: rgb(var(--navi-color-primary-light));
+  }
+
+  [data-state="indeterminate"] {
+    --indeterminate-border: rgb(var(--navi-color-primary));
+    --indeterminate-bg: rgb(var(--navi-color-primary));
+  }
+
+  [data-state="indeterminate"].dark,
+  .dark [data-state="indeterminate"] {
+    --indeterminate-bg: rgb(var(--navi-color-primary-light));
+  }
+
+  /* Shadow utilities */
+  .shadow-navi-md { box-shadow: var(--navi-shadow-md); }
+  .shadow-navi-lg { box-shadow: var(--navi-shadow-lg); }
+
+  /* Navi Checkbox component specific styles */
+  .navi-checkbox[data-state="checked"] {
+    border-color: rgb(var(--navi-color-primary));
+    background-color: rgb(var(--navi-color-primary));
+  }
+
+  .navi-checkbox[data-state="indeterminate"] {
+    border-color: rgb(var(--navi-color-primary));
+    background-color: rgb(var(--navi-color-primary));
+  }
+
+  .dark .navi-checkbox[data-state="checked"] {
+    background-color: rgb(var(--navi-color-primary-light));
+  }
+
+  .dark .navi-checkbox[data-state="indeterminate"] {
+    background-color: rgb(var(--navi-color-primary-light));
+  }
+
+  /* Navi RadioGroup component specific styles */
+  .navi-radio-item[data-state="checked"] {
+    border-color: rgb(var(--navi-color-primary));
+    background-color: rgb(var(--navi-color-primary));
+  }
+
+  .dark .navi-radio-item[data-state="checked"] {
+    border-color: rgb(var(--navi-color-primary-light));
+    background-color: rgb(var(--navi-color-primary-light));
+  }
+
+  /* Navi Switch component specific styles */
+  .navi-switch[data-state="checked"] {
+    background-color: rgb(var(--navi-color-primary));
+  }
+
+  .dark .navi-switch[data-state="checked"] {
+    background-color: rgb(var(--navi-color-primary-light));
+  }
+
+  .navi-switch[data-state="checked"] .navi-switch-thumb {
+    transform: translateX(1.25rem);
+  }
+
+  .navi-switch[data-state="checked"].h-5 .navi-switch-thumb {
+    transform: translateX(1rem);
+  }
+
+  .navi-switch[data-state="checked"].h-6 .navi-switch-thumb {
+    transform: translateX(1.25rem);
+  }
+
+  .navi-switch[data-state="checked"].h-7 .navi-switch-thumb {
+    transform: translateX(1.75rem);
+  }
 }

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Button } from '@/components/primitives'
 import { ThemeSwitcher } from '@/components/primitives'
-import { tokens } from './design-tokens'
 
 const meta: Meta = {
   title: 'Tokens/Test Colors',
@@ -11,21 +10,21 @@ export default meta
 type Story = StoryObj
 
 const semanticColors = [
-  { name: 'Primary', key: 'primary' },
-  { name: 'Success', key: 'success' },
-  { name: 'Warning', key: 'warning' },
-  { name: 'Destructive', key: 'destructive' },
-  { name: 'Info', key: 'info' },
-  { name: 'Neutral', key: 'neutral' },
-] as const
-
-const tailwindClasses = [
   { name: 'Primary', class: 'bg-navi-primary' },
   { name: 'Success', class: 'bg-navi-success' },
   { name: 'Warning', class: 'bg-navi-warning' },
   { name: 'Destructive', class: 'bg-navi-destructive' },
   { name: 'Info', class: 'bg-navi-info' },
   { name: 'Neutral', class: 'bg-navi-neutral' },
+] as const
+
+const tailwindClasses = [
+  { name: 'Primary Light', class: 'bg-navi-primary-light' },
+  { name: 'Primary Dark', class: 'bg-navi-primary-dark' },
+  { name: 'Success Light', class: 'bg-navi-success-light' },
+  { name: 'Warning Light', class: 'bg-navi-warning-light' },
+  { name: 'Destructive Dark', class: 'bg-navi-destructive-dark' },
+  { name: 'Destructive Light', class: 'bg-navi-destructive-light' },
 ] as const
 
 export const AllColors: Story = {
@@ -45,14 +44,10 @@ export const AllColors: Story = {
             Colores Semánticos (Design Tokens)
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {semanticColors.map(({ name, key }) => (
+            {semanticColors.map(({ name, class: className }) => (
               <div
-                key={key}
-                style={{ 
-                  backgroundColor: tokens.colors[key as keyof typeof tokens.colors],
-                  color: 'rgb(var(--navi-color-inverse))'
-                }}
-                className="p-4 rounded-navi-md font-semibold"
+                key={className}
+                className={`p-4 ${className} text-navi-inverse rounded-navi-md font-semibold`}
               >
                 {name}
               </div>

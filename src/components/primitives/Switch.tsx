@@ -22,9 +22,9 @@ const rootSize: Record<SwitchSize, string> = {
 }
 
 const thumbSize: Record<SwitchSize, string> = {
-  sm: 'size-4 data-[state=checked]:translate-x-4',
-  md: 'size-5 data-[state=checked]:translate-x-5',
-  lg: 'size-6 data-[state=checked]:translate-x-7',
+  sm: 'size-4',
+  md: 'size-5',
+  lg: 'size-6',
 }
 
 const Switch = React.forwardRef<
@@ -40,7 +40,7 @@ const Switch = React.forwardRef<
       id={id}
       disabled={disabled}
       className={cn(
-        'peer inline-flex shrink-0 cursor-pointer items-center rounded-full border border-transparent bg-navi-neutral/25 dark:bg-navi-neutral/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary/50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-navi-surface focus-visible:ring-offset-navi-surface disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-navi-primary dark:data-[state=checked]:bg-navi-primary-light',
+        'navi-switch peer inline-flex shrink-0 cursor-pointer items-center rounded-full border border-transparent bg-navi-neutral/25 dark:bg-navi-neutral/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary/50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-navi-surface focus-visible:ring-offset-navi-surface disabled:cursor-not-allowed disabled:opacity-50',
         rootSize[size],
         className
       )}
@@ -49,7 +49,8 @@ const Switch = React.forwardRef<
       <SwitchPrimitive.Thumb
         className={cn(
           'pointer-events-none block translate-x-0.5 rounded-full bg-navi-inverse shadow-navi-sm transition-transform',
-          thumbSize[size]
+          thumbSize[size],
+          'navi-switch-thumb'
         )}
       />
     </SwitchPrimitive.Root>

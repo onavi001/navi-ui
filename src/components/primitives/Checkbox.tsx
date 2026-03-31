@@ -50,8 +50,8 @@ const Checkbox = React.forwardRef<
           id={id}
           disabled={disabled}
           className={cn(
-            'group mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-navi-sm border border-navi-border dark:border-navi-border-dark bg-navi-surface dark:bg-navi-surface-hover text-navi-inverse transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary/50 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-navi-surface focus-visible:ring-offset-navi-surface disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-navi-primary data-[state=checked]:bg-navi-primary dark:data-[state=checked]:bg-navi-primary-light data-[state=indeterminate]:border-navi-primary data-[state=indeterminate]:bg-navi-primary dark:data-[state=indeterminate]:bg-navi-primary-light',
-            errorMessage && 'border-navi-destructive data-[state=checked]:border-navi-destructive data-[state=checked]:bg-navi-destructive data-[state=indeterminate]:border-navi-destructive data-[state=indeterminate]:bg-navi-destructive'
+            'group mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-navi-sm border border-navi-border transition-all duration-200 bg-navi-surface text-navi-inverse focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 navi-checkbox',
+            'dark:border-navi-border-dark dark:bg-navi-surface-hover dark:focus-visible:ring-offset-navi-surface'
           )}
           {...props}
         >

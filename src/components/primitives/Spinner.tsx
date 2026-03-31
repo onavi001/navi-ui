@@ -24,7 +24,7 @@ const Spinner = React.forwardRef<HTMLSpanElement, SpinnerProps>(
       role="status"
       aria-label={ariaLabel}
       className={cn(
-        'inline-block shrink-0 rounded-full border-navi-primary dark:border-navi-primary-light border-t-transparent',
+        'navi-spinner inline-block shrink-0 rounded-full border-navi-primary dark:border-navi-primary-light border-t-transparent',
         'animate-[navi-spinner-spin_0.7s_linear_infinite]',
         sizeStyles[size],
         className

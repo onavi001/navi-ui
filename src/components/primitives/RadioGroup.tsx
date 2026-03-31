@@ -20,7 +20,7 @@ export interface RadioGroupProps
 }
 
 const itemStyles =
-  'aspect-square size-4 rounded-full border border-navi-neutral/30 bg-navi-surface text-navi-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 focus-visible:ring-offset-navi-surface disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:border-navi-primary data-[state=checked]:bg-navi-primary'
+  'navi-radio-item aspect-square size-4 rounded-full border border-navi-neutral/30 bg-navi-surface text-navi-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 focus-visible:ring-offset-navi-surface disabled:cursor-not-allowed disabled:opacity-50'
 
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,

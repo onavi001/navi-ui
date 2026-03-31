@@ -1,10 +1,12 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
 export default {
   darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./.storybook/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -41,6 +43,35 @@ export default {
         'navi-md': 'var(--navi-radius-md)',
         'navi-lg': 'var(--navi-radius-lg)',
       },
+      boxShadow: {
+        'navi-sm': 'var(--navi-shadow-sm)',
+        'navi-md': 'var(--navi-shadow-md)',
+        'navi-lg': 'var(--navi-shadow-lg)',
+        'navi-xl': 'var(--navi-shadow-xl)',
+      },
     },
   },
+  plugins: [
+    plugin(function({ addVariant, matchVariant }) {
+      // Add data-state variants
+      matchVariant('data-state', (value) => `&[data-state="${value}"]`, {
+        values: {
+          checked: 'checked',
+          unchecked: 'unchecked',
+          indeterminate: 'indeterminate',
+          open: 'open',
+          closed: 'closed',
+        },
+      })
+      
+      // Add group-data-state variants
+      matchVariant('group-data-state', (value) => `:where(.group)[data-state="${value}"] &`, {
+        values: {
+          checked: 'checked',
+          unchecked: 'unchecked',
+          indeterminate: 'indeterminate',
+        },
+      })
+    }),
+  ],
 } satisfies Config
