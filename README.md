@@ -42,7 +42,7 @@ A production-ready component library built for teams who care about:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  30+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
+│  37+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
 │  Dark mode automatic  ·  Tailwind v4  ·  Radix UI primitives    │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -88,7 +88,7 @@ export default function Example() {
 
 ---
 
-## Components (30)
+## Components (37)
 
 ## Delivery Phases
 
@@ -104,6 +104,10 @@ export default function Example() {
 - **Data Display:** Avatar, AvatarGroup
 - **Forms:** FormField, Select, Combobox, DatePicker
 - **Navigation:** Tabs, DropdownMenu, Breadcrumb, Pagination, Sidebar
+
+### Phase 3 (Advanced)
+
+- **Advanced:** Progress, Skeleton, Accordion, Dialog, Drawer, Command, Stepper
 
 ### Primitives (10)
 
@@ -151,6 +155,20 @@ Theme management and appearance
 | Component         | Features                                   | Status |
 | ----------------- | ------------------------------------------ | ------ |
 | **ThemeSwitcher** | Light/dark mode toggle with auto-detection | ✅     |
+
+### Advanced (7)
+
+Interaction patterns and complex flows
+
+| Component     | Features                                                     | Status |
+| ------------- | ------------------------------------------------------------ | ------ |
+| **Progress**  | Determinate/indeterminate, variants, labels                 | ✅     |
+| **Skeleton**  | Loading placeholders with multiple variants                 | ✅     |
+| **Accordion** | Single/multiple mode, variants, animated content            | ✅     |
+| **Dialog**    | Accessible modal primitives with composable API             | ✅     |
+| **Drawer**    | Side panel overlays with direction and size variants        | ✅     |
+| **Command**   | Command palette / searchable action list with keyboard flow | ✅     |
+| **Stepper**   | Multi-step indicator, orientation + variants + step states  | ✅     |
 
 ---
 
@@ -302,6 +320,10 @@ navi-ui/
 │   │   ├── primitives/      # Button, Input, Label, Badge, Spinner…
 │   │   ├── layout/          # Card, Flex, Grid, Stack, Separator
 │   │   ├── feedback/        # Alert, Toast, Tooltip
+│   │   ├── data-display/    # Avatar, AvatarGroup
+│   │   ├── forms/           # FormField, Select, Combobox, DatePicker
+│   │   ├── navigation/      # Tabs, DropdownMenu, Breadcrumb, Pagination, Sidebar
+│   │   ├── advanced/        # Progress, Skeleton, Accordion, Dialog, Drawer, Command, Stepper
 │   │   ├── theme/           # ThemeSwitcher
 │   │   └── index.ts         # Barrel exports
 │   ├── hooks/               # useToast, useTheme, etc.
