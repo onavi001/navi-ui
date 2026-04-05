@@ -1,6 +1,9 @@
 export * from "./components/feedback";
 export * from "./components/layout";
 export * from "./components/primitives";
+export * from "./components/data-display";
+export * from "./components/forms";
+export * from "./components/navigation";
 export * from "./components/theme";
 export { cn } from "./utils/cn";
 export { tokens } from "./tokens/design-tokens";

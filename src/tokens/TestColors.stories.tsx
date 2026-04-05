@@ -1,31 +1,31 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Button } from '@/components/primitives'
-import { ThemeSwitcher } from '@/components/theme'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Button } from "@/components/primitives";
+import { ThemeSwitcher } from "@/components/theme";
 
 const meta: Meta = {
-  title: 'Tokens/Test Colors',
-  tags: ['autodocs'],
-}
-export default meta
-type Story = StoryObj
+  title: "Tokens/Test Colors",
+  tags: ["autodocs"],
+};
+export default meta;
+type Story = StoryObj;
 
 const semanticColors = [
-  { name: 'Primary', class: 'bg-navi-primary' },
-  { name: 'Success', class: 'bg-navi-success' },
-  { name: 'Warning', class: 'bg-navi-warning' },
-  { name: 'Destructive', class: 'bg-navi-destructive' },
-  { name: 'Info', class: 'bg-navi-info' },
-  { name: 'Neutral', class: 'bg-navi-neutral' },
-] as const
+  { name: "Primary", class: "bg-navi-primary" },
+  { name: "Success", class: "bg-navi-success" },
+  { name: "Warning", class: "bg-navi-warning" },
+  { name: "Destructive", class: "bg-navi-destructive" },
+  { name: "Info", class: "bg-navi-info" },
+  { name: "Neutral", class: "bg-navi-neutral" },
+] as const;
 
 const tailwindClasses = [
-  { name: 'Primary Light', class: 'bg-navi-primary-light' },
-  { name: 'Primary Dark', class: 'bg-navi-primary-dark' },
-  { name: 'Success Light', class: 'bg-navi-success-light' },
-  { name: 'Warning Light', class: 'bg-navi-warning-light' },
-  { name: 'Destructive Dark', class: 'bg-navi-destructive-dark' },
-  { name: 'Destructive Light', class: 'bg-navi-destructive-light' },
-] as const
+  { name: "Primary Light", class: "bg-navi-primary-light" },
+  { name: "Primary Dark", class: "bg-navi-primary-dark" },
+  { name: "Success Light", class: "bg-navi-success-light" },
+  { name: "Warning Light", class: "bg-navi-warning-light" },
+  { name: "Destructive Dark", class: "bg-navi-destructive-dark" },
+  { name: "Destructive Light", class: "bg-navi-destructive-light" },
+] as const;
 
 export const AllColors: Story = {
   render: () => (
@@ -88,4 +88,4 @@ export const AllColors: Story = {
       </div>
     </div>
   ),
-}
+};
