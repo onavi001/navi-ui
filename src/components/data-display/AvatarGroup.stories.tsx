@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { AvatarGroup } from "./AvatarGroup";
 
 const meta: Meta<typeof AvatarGroup> = {
-  title: "Data Display/AvatarGroup",
+  title: "DataDisplay/AvatarGroup",
   component: AvatarGroup,
   tags: ["autodocs"],
   argTypes: {
