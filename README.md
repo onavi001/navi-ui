@@ -42,7 +42,7 @@ A production-ready component library built for teams who care about:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  19+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
+│  30+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
 │  Dark mode automatic  ·  Tailwind v4  ·  Radix UI primitives    │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -88,7 +88,22 @@ export default function Example() {
 
 ---
 
-## Components (19)
+## Components (30)
+
+## Delivery Phases
+
+### Phase 1 (Foundation)
+
+- **Primitives:** Button, Input, Label, Textarea, Checkbox, RadioGroup, Switch, IconButton, Badge, Spinner
+- **Layout:** Card, Flex, Grid, Stack, Separator
+- **Feedback:** Alert, Toast, Tooltip
+- **Theme:** ThemeSwitcher
+
+### Phase 2 (Expanded UI)
+
+- **Data Display:** Avatar, AvatarGroup
+- **Forms:** FormField, Select, Combobox, DatePicker
+- **Navigation:** Tabs, DropdownMenu, Breadcrumb, Pagination, Sidebar
 
 ### Primitives (10)
 
