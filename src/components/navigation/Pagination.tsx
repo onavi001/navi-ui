@@ -86,7 +86,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
           page === "ellipsis" ? (
             <span
               key={`ellipsis-${index}`}
-              className="flex h-9 w-9 items-center justify-center text-navi-ink-muted dark:text-navi-ink-muted"
+              className="flex h-9 w-9 items-center justify-center text-navi-neutral/60 dark:text-navi-neutral/60"
               aria-hidden
             >
               ...

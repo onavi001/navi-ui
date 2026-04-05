@@ -35,7 +35,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        "z-50 min-w-[8rem] overflow-hidden rounded-navi-md border border-navi-border bg-navi-surface p-1 shadow-navi-lg dark:bg-navi-surface-raised dark:border-navi-border-strong",
+        "z-50 min-w-[8rem] overflow-hidden rounded-navi-md border border-navi-border bg-navi-surface p-1 shadow-navi-lg dark:bg-navi-surface-hover dark:border-navi-border-dark",
         className,
       )}
       {...props}
@@ -64,7 +64,7 @@ const DropdownMenuItem = React.forwardRef<
     )}
     <span className="flex-1">{props.children}</span>
     {shortcut && (
-      <span className="text-xs text-navi-ink-muted dark:text-navi-ink-muted">
+      <span className="text-xs text-navi-neutral/60 dark:text-navi-neutral/60">
         {shortcut}
       </span>
     )}
@@ -84,7 +84,7 @@ const DropdownMenuSeparator = React.forwardRef<
   <DropdownMenuPrimitive.Separator
     ref={ref}
     className={cn(
-      "my-1 h-px bg-navi-border dark:bg-navi-border-strong",
+      "my-1 h-px bg-navi-border dark:bg-navi-border-dark",
       className,
     )}
     {...props}
@@ -143,7 +143,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
     )}
     <span className="flex-1">{props.children}</span>
     {shortcut && (
-      <span className="text-xs text-navi-ink-muted dark:text-navi-ink-muted">
+      <span className="text-xs text-navi-neutral/60 dark:text-navi-neutral/60">
         {shortcut}
       </span>
     )}

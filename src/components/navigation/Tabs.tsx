@@ -20,7 +20,7 @@ const TabsList = React.forwardRef<
     pills:
       "h-10 items-center justify-center rounded-navi-md bg-navi-neutral/10 p-1 dark:bg-navi-neutral/20",
     underline:
-      "h-10 items-center justify-center border-b border-navi-border dark:border-navi-border-strong",
+      "h-10 items-center justify-center border-b border-navi-border dark:border-navi-border-dark",
   };
 
   return (
@@ -41,11 +41,11 @@ const TabsTrigger = React.forwardRef<
 >(({ className, variant = "default", ...props }, ref) => {
   const variantStyles = {
     default:
-      "inline-flex items-center justify-center whitespace-nowrap rounded-navi-sm px-3 py-1.5 text-sm font-medium ring-offset-navi-surface transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-navi-surface data-[state=active]:text-navi-primary data-[state=active]:shadow-navi-sm dark:ring-offset-navi-surface-raised dark:data-[state=active]:bg-navi-surface-raised",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-navi-sm px-3 py-1.5 text-sm font-medium ring-offset-navi-surface transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-navi-surface data-[state=active]:text-navi-primary data-[state=active]:shadow-navi-sm dark:ring-offset-navi-surface dark:data-[state=active]:bg-navi-surface-hover",
     pills:
-      "inline-flex items-center justify-center whitespace-nowrap rounded-navi-full px-3 py-1.5 text-sm font-medium ring-offset-navi-surface transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-navi-primary data-[state=active]:text-navi-primary-foreground data-[state=active]:shadow-navi-sm dark:ring-offset-navi-surface-raised",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium ring-offset-navi-surface transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-navi-primary data-[state=active]:text-navi-inverse data-[state=active]:shadow-navi-sm dark:ring-offset-navi-surface",
     underline:
-      "inline-flex items-center justify-center whitespace-nowrap border-b-2 border-transparent px-3 py-1.5 text-sm font-medium ring-offset-navi-surface transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-navi-primary data-[state=active]:text-navi-primary dark:ring-offset-navi-surface-raised",
+      "inline-flex items-center justify-center whitespace-nowrap border-b-2 border-transparent px-3 py-1.5 text-sm font-medium ring-offset-navi-surface transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-navi-primary data-[state=active]:text-navi-primary dark:ring-offset-navi-surface",
   };
 
   return (
@@ -65,7 +65,7 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-2 ring-offset-navi-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 dark:ring-offset-navi-surface-raised",
+      "mt-2 ring-offset-navi-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary focus-visible:ring-offset-2 dark:ring-offset-navi-surface",
       className,
     )}
     {...props}

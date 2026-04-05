@@ -29,7 +29,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary:
     'bg-navi-neutral/10 text-navi-neutral hover:bg-navi-neutral/20 active:bg-navi-neutral/25 dark:bg-navi-neutral/20 dark:hover:bg-navi-neutral/30 dark:text-navi-neutral-light',
   ghost:
-    'bg-transparent text-navi-neutral hover:bg-navi-neutral/10 active:bg-navi-neutral/15 dark:text-navi-neutral-light dark:hover:bg-navi-neutral/25',
+    'bg-transparent text-navi-neutral hover:bg-navi-neutral/10 active:bg-navi-neutral/10 dark:text-navi-neutral-light dark:hover:bg-navi-neutral/25',
   destructive:
     'bg-navi-destructive text-navi-inverse hover:bg-navi-destructive-dark active:bg-navi-destructive-dark shadow-navi-sm hover:shadow-navi-md dark:bg-navi-destructive dark:hover:bg-navi-destructive-light',
   outline:

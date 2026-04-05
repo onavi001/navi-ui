@@ -83,7 +83,7 @@ const BreadcrumbSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <span
     ref={ref}
-    className={cn("text-navi-ink-muted dark:text-navi-ink-muted", className)}
+    className={cn("text-navi-neutral/60 dark:text-navi-neutral/60", className)}
     {...props}
   />
 ));

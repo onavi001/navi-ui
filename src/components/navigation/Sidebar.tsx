@@ -65,7 +65,7 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
           <a
             href={child.href}
             className={cn(
-              'flex items-center gap-2 rounded-navi-md px-3 py-2 text-sm text-navi-ink-muted transition-colors hover:bg-navi-neutral/10 hover:text-navi-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary dark:text-navi-ink-muted dark:hover:bg-navi-neutral/20 dark:hover:text-navi-ink'
+              'flex items-center gap-2 rounded-navi-md px-3 py-2 text-sm text-navi-neutral/60 transition-colors hover:bg-navi-neutral/10 hover:text-navi-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary dark:text-navi-neutral/60 dark:hover:bg-navi-neutral/20 dark:hover:text-navi-ink'
             )}
           >
             {child.icon ? <span className="flex size-4 items-center justify-center">{child.icon}</span> : null}
@@ -136,26 +136,26 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
     const defaultFooter = (
       <div className="flex items-center gap-2">
         <Avatar size="sm" fallback="NU" />
-        {!isCollapsed ? <span className="text-sm text-navi-ink-muted">Navi User</span> : null}
+        {!isCollapsed ? <span className="text-sm text-navi-neutral/60">Navi User</span> : null}
       </div>
     )
 
     const navClasses = cn(
-      'flex h-full flex-col border-r border-navi-border bg-navi-surface dark:border-navi-border-strong dark:bg-navi-surface-raised',
+      'flex h-full flex-col border-r border-navi-border bg-navi-surface dark:border-navi-border-dark dark:bg-navi-surface-hover',
       isCollapsed ? 'w-16' : 'w-72',
       className
     )
 
     const renderNav = (withRef: boolean) => (
       <nav ref={withRef ? ref : undefined} className={navClasses} aria-label="sidebar" {...props}>
-        <div className="flex items-center justify-between border-b border-navi-border p-3 dark:border-navi-border-strong">
+        <div className="flex items-center justify-between border-b border-navi-border p-3 dark:border-navi-border-dark">
           <div className={cn('min-w-0', isCollapsed && 'hidden')}>
             {header ?? <span className="text-sm font-semibold text-navi-ink">Navigation</span>}
           </div>
           <button
             type="button"
             onClick={() => handleCollapseChange(!isCollapsed)}
-            className="rounded-navi-sm p-1.5 text-navi-ink-muted transition-colors hover:bg-navi-neutral/10 hover:text-navi-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary dark:hover:bg-navi-neutral/20"
+            className="rounded-navi-sm p-1.5 text-navi-neutral/60 transition-colors hover:bg-navi-neutral/10 hover:text-navi-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary dark:hover:bg-navi-neutral/20"
             aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
             <svg
@@ -179,7 +179,7 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
           <ul className="space-y-1">{items.map(renderItem)}</ul>
         </div>
 
-        <div className="border-t border-navi-border p-3 dark:border-navi-border-strong">
+        <div className="border-t border-navi-border p-3 dark:border-navi-border-dark">
           {footer ?? defaultFooter}
         </div>
       </nav>
@@ -194,7 +194,7 @@ const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
             <Dialog.Trigger asChild>
               <button
                 type="button"
-                className="rounded-navi-md border border-navi-border bg-navi-surface p-2 text-navi-ink shadow-navi-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary dark:border-navi-border-strong dark:bg-navi-surface-raised"
+                className="rounded-navi-md border border-navi-border bg-navi-surface p-2 text-navi-ink shadow-navi-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navi-primary dark:border-navi-border-dark dark:bg-navi-surface-hover"
                 aria-label="Open sidebar"
               >
                 <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>

@@ -82,7 +82,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
             value={formattedValue}
             readOnly
             className={cn(
-              "flex h-10 w-full rounded-navi-md border border-navi-border bg-navi-surface px-3 py-2 text-base text-navi-ink placeholder:text-navi-ink-muted shadow-navi-sm focus:outline-none focus:ring-2 focus:ring-navi-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-navi-border-strong dark:bg-navi-surface-raised dark:text-navi-ink dark:placeholder:text-navi-ink-muted dark:focus:ring-offset-navi-surface-raised",
+              "flex h-10 w-full rounded-navi-md border border-navi-border bg-navi-surface px-3 py-2 text-base text-navi-ink placeholder:text-navi-neutral/60 shadow-navi-sm focus:outline-none focus:ring-2 focus:ring-navi-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-navi-border-dark dark:bg-navi-surface-hover dark:text-navi-ink dark:placeholder:text-navi-neutral/60 dark:focus:ring-offset-navi-surface",
               className,
             )}
             {...props}
@@ -92,7 +92,7 @@ const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
           <PopoverPrimitive.Content
             align="start"
             sideOffset={8}
-            className="z-50 rounded-navi-md border border-navi-border bg-navi-surface p-3 shadow-navi-lg dark:border-navi-border-strong dark:bg-navi-surface-raised"
+            className="z-50 rounded-navi-md border border-navi-border bg-navi-surface p-3 shadow-navi-lg dark:border-navi-border-dark dark:bg-navi-surface-hover"
           >
             <DayPicker
               mode="single"
@@ -115,20 +115,20 @@ const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
                 table: "w-full border-collapse space-y-1",
                 head_row: "flex",
                 head_cell:
-                  "text-navi-ink-muted dark:text-navi-ink-muted rounded-navi-sm w-9 font-normal text-[0.8rem]",
+                  "text-navi-neutral/60 dark:text-navi-neutral/60 rounded-navi-sm w-9 font-normal text-[0.8rem]",
                 row: "flex w-full mt-2",
                 cell: "h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-navi-neutral/10 [&:has([aria-selected])]:bg-navi-neutral/10 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 dark:[&:has([aria-selected].day-outside)]:bg-navi-neutral/20 dark:[&:has([aria-selected])]:bg-navi-neutral/20",
                 day: cn(
                   "h-9 w-9 p-0 rounded-navi-sm hover:bg-navi-neutral/10 dark:hover:bg-navi-neutral/20 focus:outline-none focus:ring-2 focus:ring-navi-primary aria-selected:opacity-100",
                 ),
                 day_selected:
-                  "bg-navi-primary text-navi-primary-foreground hover:bg-navi-primary hover:text-navi-primary-foreground focus:bg-navi-primary focus:text-navi-primary-foreground",
+                  "bg-navi-primary text-navi-inverse hover:bg-navi-primary hover:text-navi-inverse focus:bg-navi-primary focus:text-navi-inverse",
                 day_today:
                   "bg-navi-neutral/10 text-navi-primary dark:bg-navi-neutral/20",
                 day_outside:
-                  "day-outside text-navi-ink-muted opacity-50 dark:text-navi-ink-muted aria-selected:bg-navi-neutral/10 aria-selected:text-navi-ink-muted aria-selected:opacity-50 dark:aria-selected:bg-navi-neutral/20",
+                  "day-outside text-navi-neutral/60 opacity-50 dark:text-navi-neutral/60 aria-selected:bg-navi-neutral/10 aria-selected:text-navi-neutral/60 aria-selected:opacity-50 dark:aria-selected:bg-navi-neutral/20",
                 day_disabled:
-                  "text-navi-ink-muted opacity-50 dark:text-navi-ink-muted",
+                  "text-navi-neutral/60 opacity-50 dark:text-navi-neutral/60",
                 day_range_middle:
                   "aria-selected:bg-navi-neutral/10 aria-selected:text-navi-ink dark:aria-selected:bg-navi-neutral/20 dark:aria-selected:text-navi-ink",
                 day_hidden: "invisible",

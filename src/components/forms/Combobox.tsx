@@ -101,7 +101,7 @@ const Combobox = React.forwardRef<HTMLInputElement, ComboboxProps>(
             onKeyDown={handleKeyDown}
             onFocus={() => setOpen(true)}
             className={cn(
-              "flex h-10 w-full rounded-navi-md border border-navi-border bg-navi-surface px-3 py-2 text-base text-navi-ink placeholder:text-navi-ink-muted shadow-navi-sm focus:outline-none focus:ring-2 focus:ring-navi-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-navi-border-strong dark:bg-navi-surface-raised dark:text-navi-ink dark:placeholder:text-navi-ink-muted dark:focus:ring-offset-navi-surface-raised",
+              "flex h-10 w-full rounded-navi-md border border-navi-border bg-navi-surface px-3 py-2 text-base text-navi-ink placeholder:text-navi-neutral/60 shadow-navi-sm focus:outline-none focus:ring-2 focus:ring-navi-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-navi-border-dark dark:bg-navi-surface-hover dark:text-navi-ink dark:placeholder:text-navi-neutral/60 dark:focus:ring-offset-navi-surface",
               className,
             )}
             {...props}
@@ -111,7 +111,7 @@ const Combobox = React.forwardRef<HTMLInputElement, ComboboxProps>(
           <PopoverPrimitive.Content
             align="start"
             sideOffset={8}
-            className="z-50 w-[var(--radix-popover-trigger-width)] rounded-navi-md border border-navi-border bg-navi-surface p-1 shadow-navi-lg dark:border-navi-border-strong dark:bg-navi-surface-raised"
+            className="z-50 w-[var(--radix-popover-trigger-width)] rounded-navi-md border border-navi-border bg-navi-surface p-1 shadow-navi-lg dark:border-navi-border-dark dark:bg-navi-surface-hover"
           >
             {filteredOptions.length > 0 ? (
               <div className="space-y-1">
@@ -131,7 +131,7 @@ const Combobox = React.forwardRef<HTMLInputElement, ComboboxProps>(
                 ))}
               </div>
             ) : (
-              <p className="px-2 py-1.5 text-sm text-navi-ink-muted dark:text-navi-ink-muted">
+              <p className="px-2 py-1.5 text-sm text-navi-neutral/60 dark:text-navi-neutral/60">
                 {emptyMessage}
               </p>
             )}

@@ -37,7 +37,7 @@ const FormField = React.forwardRef<HTMLDivElement, FormFieldProps>(
             {errorMessage}
           </p>
         ) : helperText ? (
-          <p className="text-sm text-navi-ink-muted dark:text-navi-ink-muted">
+          <p className="text-sm text-navi-neutral/60 dark:text-navi-neutral/60">
             {helperText}
           </p>
         ) : null}

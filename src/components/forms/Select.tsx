@@ -53,7 +53,7 @@ const Select = React.forwardRef<
           <SelectPrimitive.Trigger
             ref={ref}
             className={cn(
-              "flex w-full items-center justify-between rounded-navi-md border border-navi-border bg-navi-surface px-3 py-2 text-navi-ink shadow-navi-sm focus:outline-none focus:ring-2 focus:ring-navi-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-navi-surface-raised dark:border-navi-border-strong dark:text-navi-ink dark:focus:ring-navi-primary",
+              "flex w-full items-center justify-between rounded-navi-md border border-navi-border bg-navi-surface px-3 py-2 text-navi-ink shadow-navi-sm focus:outline-none focus:ring-2 focus:ring-navi-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-navi-surface-hover dark:border-navi-border-dark dark:text-navi-ink dark:focus:ring-navi-primary",
               sizeStyles[size],
               error && "border-navi-destructive focus:ring-navi-destructive",
             )}
@@ -75,7 +75,7 @@ const Select = React.forwardRef<
             </SelectPrimitive.Icon>
           </SelectPrimitive.Trigger>
           <SelectPrimitive.Portal>
-            <SelectPrimitive.Content className="z-50 min-w-[8rem] overflow-hidden rounded-navi-md border border-navi-border bg-navi-surface p-1 shadow-navi-md dark:bg-navi-surface-raised dark:border-navi-border-strong">
+            <SelectPrimitive.Content className="z-50 min-w-[8rem] overflow-hidden rounded-navi-md border border-navi-border bg-navi-surface p-1 shadow-navi-md dark:bg-navi-surface-hover dark:border-navi-border-dark">
               <SelectPrimitive.Viewport>
                 {options.map((option) => (
                   <SelectPrimitive.Item

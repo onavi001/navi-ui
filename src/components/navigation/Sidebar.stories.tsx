@@ -57,7 +57,7 @@ const baseItems: SidebarItem[] = [
 ]
 
 const sharedHeader = <span className="text-sm font-semibold text-navi-ink">Navi Workspace</span>
-const sharedFooter = <span className="text-xs text-navi-ink-muted">v1.0.0</span>
+const sharedFooter = <span className="text-xs text-navi-neutral/60">v1.0.0</span>
 
 export const Default: Story = {
   args: {
