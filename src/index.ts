@@ -4,6 +4,15 @@ export * from "./components/primitives";
 export * from "./components/data-display";
 export * from "./components/forms";
 export * from "./components/navigation";
+export {
+  Progress,
+  Skeleton,
+  Accordion,
+  Dialog,
+  Drawer,
+  Command,
+  Stepper,
+} from "./components/advanced";
 export * from "./components/theme";
 export { cn } from "./utils/cn";
 export { tokens } from "./tokens/design-tokens";

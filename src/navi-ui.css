@@ -50,12 +50,257 @@ body {
   }
 }
 
+@keyframes navi-accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes navi-accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes navi-dialog-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navi-dialog-overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes navi-dialog-content-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 0.5rem)) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes navi-dialog-content-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 0.5rem)) scale(0.98);
+  }
+}
+
+@keyframes navi-dialog-fullscreen-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navi-dialog-fullscreen-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes navi-drawer-right-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navi-drawer-right-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes navi-drawer-left-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navi-drawer-left-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes navi-drawer-top-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navi-drawer-top-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes navi-drawer-bottom-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navi-drawer-bottom-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
 .navi-skeleton-pulse {
   animation: navi-skeleton-pulse 1.5s ease-in-out infinite;
 }
 
+.navi-accordion-content[data-state='open'] {
+  animation: navi-accordion-down 0.2s ease-out;
+}
+
+.navi-accordion-content[data-state='closed'] {
+  animation: navi-accordion-up 0.2s ease-out;
+}
+
+.navi-dialog-overlay[data-state='open'] {
+  animation: navi-dialog-overlay-in 0.2s ease-out;
+}
+
+.navi-dialog-overlay[data-state='closed'] {
+  animation: navi-dialog-overlay-out 0.2s ease-out;
+}
+
+.navi-dialog-content[data-state='open'] {
+  animation: navi-dialog-content-in 0.2s ease-out;
+}
+
+.navi-dialog-content[data-state='closed'] {
+  animation: navi-dialog-content-out 0.2s ease-out;
+}
+
+.navi-dialog-content-fullscreen[data-state='open'] {
+  animation: navi-dialog-fullscreen-in 0.2s ease-out;
+}
+
+.navi-dialog-content-fullscreen[data-state='closed'] {
+  animation: navi-dialog-fullscreen-out 0.2s ease-out;
+}
+
+.navi-drawer-overlay[data-state='open'] {
+  animation: navi-dialog-overlay-in 0.2s ease-out;
+}
+
+.navi-drawer-overlay[data-state='closed'] {
+  animation: navi-dialog-overlay-out 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='right'][data-state='open'] {
+  animation: navi-drawer-right-in 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='right'][data-state='closed'] {
+  animation: navi-drawer-right-out 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='left'][data-state='open'] {
+  animation: navi-drawer-left-in 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='left'][data-state='closed'] {
+  animation: navi-drawer-left-out 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='top'][data-state='open'] {
+  animation: navi-drawer-top-in 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='top'][data-state='closed'] {
+  animation: navi-drawer-top-out 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='bottom'][data-state='open'] {
+  animation: navi-drawer-bottom-in 0.2s ease-out;
+}
+
+.navi-drawer-content[data-side='bottom'][data-state='closed'] {
+  animation: navi-drawer-bottom-out 0.2s ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .navi-skeleton-pulse {
+    animation: none;
+  }
+
+  .navi-accordion-content[data-state='open'],
+  .navi-accordion-content[data-state='closed'],
+  .navi-dialog-overlay[data-state='open'],
+  .navi-dialog-overlay[data-state='closed'],
+  .navi-dialog-content[data-state='open'],
+  .navi-dialog-content[data-state='closed'],
+  .navi-dialog-content-fullscreen[data-state='open'],
+  .navi-dialog-content-fullscreen[data-state='closed'],
+  .navi-drawer-overlay[data-state='open'],
+  .navi-drawer-overlay[data-state='closed'],
+  .navi-drawer-content[data-side='right'][data-state='open'],
+  .navi-drawer-content[data-side='right'][data-state='closed'],
+  .navi-drawer-content[data-side='left'][data-state='open'],
+  .navi-drawer-content[data-side='left'][data-state='closed'],
+  .navi-drawer-content[data-side='top'][data-state='open'],
+  .navi-drawer-content[data-side='top'][data-state='closed'],
+  .navi-drawer-content[data-side='bottom'][data-state='open'],
+  .navi-drawer-content[data-side='bottom'][data-state='closed'] {
     animation: none;
   }
 }
