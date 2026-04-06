@@ -1,0 +1,49 @@
+name: Chromatic
+
+on:
+  # Run visual regression checks only for PRs to main.
+  pull_request:
+    branches: [main]
+
+# Cancel older Chromatic runs for the same PR branch.
+concurrency:
+  group: chromatic-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  chromatic:
+    name: Visual Regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # Checkout source code.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Setup Node.js runtime.
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Cache node_modules based on lockfile.
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node20-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node20-modules-
+
+      # Install dependencies.
+      - name: Install dependencies
+        run: npm ci
+
+      # Run Chromatic against only changed stories.
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true
+          onlyChanged: true

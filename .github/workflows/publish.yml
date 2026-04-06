@@ -1,0 +1,62 @@
+name: Publish
+
+on:
+  # Publish package only when pushing version tags like v1.2.3.
+  push:
+    tags:
+      - "v*"
+
+# Cancel older publish runs for the same tag if re-triggered.
+concurrency:
+  group: publish-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      # Needed to create the GitHub Release for the tag.
+      contents: write
+
+    steps:
+      # Checkout tagged source.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Setup Node and npm registry for publish.
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      # Cache node_modules for faster install.
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node20-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node20-modules-
+
+      # Install dependencies.
+      - name: Install dependencies
+        run: npm ci
+
+      # Build distributable artifacts before publish.
+      - name: Build package
+        run: npm run build
+
+      # Publish package to npm.
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Create a GitHub Release for the published tag.
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
