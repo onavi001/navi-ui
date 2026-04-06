@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '22'
           registry-url: https://registry.npmjs.org
 
       # Cache node_modules for faster install.
@@ -37,9 +37,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: node_modules
-          key: ${{ runner.os }}-node20-modules-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-node22-modules-${{ hashFiles('package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node20-modules-
+            ${{ runner.os }}-node22-modules-
 
       # Install dependencies.
       - name: Install dependencies
