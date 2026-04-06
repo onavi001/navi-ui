@@ -31,6 +31,7 @@ jobs:
         with:
           node-version: '22'
           registry-url: https://registry.npmjs.org
+          scope: '@navi01'
 
       # Cache node_modules for faster install.
       - name: Cache node_modules
@@ -49,9 +50,17 @@ jobs:
       - name: Build package
         run: npm run build
 
+      # Fail early with a clear message if token/scope auth is wrong.
+      - name: Verify npm authentication
+        run: |
+          npm config get registry
+          npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       # Publish package to npm.
       - name: Publish to npm
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
