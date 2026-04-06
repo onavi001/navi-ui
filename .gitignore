@@ -25,3 +25,6 @@ dist-ssr
 
 *storybook.log
 storybook-static
+
+# Personal docs (never commit)
+PRIVATE_RELEASE_GUIDE.md
