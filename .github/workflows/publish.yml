@@ -29,9 +29,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
           registry-url: https://registry.npmjs.org
-          scope: '@navi01'
+          scope: "@navi01"
           always-auth: true
 
       # Cache node_modules for faster install.
