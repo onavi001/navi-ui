@@ -1,9 +1,12 @@
 name: Chromatic
 
 on:
-  # Run visual regression checks only for PRs to main.
+  # Run visual regression checks for PRs and direct pushes to main.
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 # Cancel older Chromatic runs for the same PR branch.
 concurrency:
@@ -20,6 +23,8 @@ jobs:
       # Checkout source code.
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # Setup Node.js runtime.
       - name: Setup Node.js
