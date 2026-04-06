@@ -1,7 +1,7 @@
 # Navi-UI - Project Specification
 
 Nombre del proyecto: Navi-UI  
-Paquete npm: @onavi001/react  
+Paquete npm: @navi01/react  
 Descripcion: Libreria de componentes React enterprise-grade con accesibilidad, theming y tipado estricto.
 
 ## Objetivo

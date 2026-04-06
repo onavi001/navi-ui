@@ -1,12 +1,12 @@
 {
-  "name": "@onavi001/react",
+  "name": "@navi01/react",
   "version": "0.1.0",
   "description": "Enterprise-grade accessible React components",
   "author": "Oscar Ivan",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/onavi001/navi-ui"
+    "url": "git+https://github.com/onavi001/navi-ui.git"
   },
   "homepage": "https://github.com/onavi001/navi-ui#readme",
   "keywords": [
@@ -18,7 +18,7 @@
     "accessible",
     "typescript"
   ],
-  "private": true,
+  "private": false,
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -39,6 +39,9 @@
     "README.md",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": false,
   "scripts": {
     "dev": "vite",
