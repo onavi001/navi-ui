@@ -1,7 +1,18 @@
 export * from "./components/feedback";
 export * from "./components/layout";
 export * from "./components/primitives";
-export * from "./components/data-display";
+export {
+  Avatar,
+  AvatarGroup,
+  DataTable,
+  type AvatarProps,
+  type AvatarSize,
+  type AvatarShape,
+  type AvatarStatus,
+  type AvatarGroupProps,
+  type DataTableProps,
+  type DataTableColumn,
+} from "./components/data-display";
 export * from "./components/forms";
 export * from "./components/navigation";
 export {

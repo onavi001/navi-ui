@@ -42,7 +42,7 @@ A production-ready component library built for teams who care about:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  37+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
+│  38+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
 │  Dark mode automatic  ·  Tailwind v4  ·  Radix UI primitives    │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -88,7 +88,7 @@ export default function Example() {
 
 ---
 
-## Components (37)
+## Components (38)
 
 ## Delivery Phases
 
@@ -101,7 +101,7 @@ export default function Example() {
 
 ### Phase 2 (Expanded UI)
 
-- **Data Display:** Avatar, AvatarGroup
+- **Data Display:** Avatar, AvatarGroup, DataTable
 - **Forms:** FormField, Select, Combobox, DatePicker
 - **Navigation:** Tabs, DropdownMenu, Breadcrumb, Pagination, Sidebar
 
@@ -155,6 +155,16 @@ Theme management and appearance
 | Component         | Features                                   | Status |
 | ----------------- | ------------------------------------------ | ------ |
 | **ThemeSwitcher** | Light/dark mode toggle with auto-detection | ✅     |
+
+### Data Display (3)
+
+Data visualization and tabular presentation
+
+| Component       | Features                                                                        | Status |
+| --------------- | ------------------------------------------------------------------------------- | ------ |
+| **Avatar**      | Image/fallback avatar, size/shape/status variants                               | ✅     |
+| **AvatarGroup** | Grouped avatars with overlap and overflow (`+N`)                                | ✅     |
+| **DataTable**   | TanStack Table v8, sorting, filtering, pagination, selection, CSV export, sticky header | ✅     |
 
 ### Advanced (7)
 
