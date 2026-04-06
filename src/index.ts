@@ -29,3 +29,4 @@ export { cn } from "./utils/cn";
 export { tokens } from "./tokens/design-tokens";
 export { useToast } from "./hooks/useToast";
 export { useTheme, type Theme } from "./hooks/useTheme";
+export * from "./templates";

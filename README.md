@@ -42,7 +42,7 @@ A production-ready component library built for teams who care about:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  38+ components  ·  React 19  ·  WCAG 2.2 AA  ·  CSS Variables  │
+│  38+ components  ·  4 templates  ·  React 19  ·  WCAG 2.2 AA   │
 │  Dark mode automatic  ·  Tailwind v4  ·  Radix UI primitives    │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -88,7 +88,7 @@ export default function Example() {
 
 ---
 
-## Components (38)
+## Components (38) + Templates (4)
 
 ## Delivery Phases
 
@@ -108,6 +108,15 @@ export default function Example() {
 ### Phase 3 (Advanced)
 
 - **Advanced:** Progress, Skeleton, Accordion, Dialog, Drawer, Command, Stepper
+
+### Templates (4)
+
+Full-page layouts composed entirely from Navi-UI components:
+
+- **Login** — Split-screen authentication page with OAuth buttons and form validation
+- **Dashboard** — Admin dashboard with Sidebar, KPI cards, DataTable, and Quick Actions
+- **Settings** — Multi-tab settings page (Profile, Account, Notifications, Appearance, Danger Zone)
+- **Pricing** — Pricing page with monthly/annual toggle, 3-tier plan cards, and FAQ Accordion
 
 ### Primitives (10)
 
@@ -179,6 +188,27 @@ Interaction patterns and complex flows
 | **Drawer**    | Side panel overlays with direction and size variants        | ✅     |
 | **Command**   | Command palette / searchable action list with keyboard flow | ✅     |
 | **Stepper**   | Multi-step indicator, orientation + variants + step states  | ✅     |
+
+### Templates (4)
+
+Full-page layouts built exclusively from Navi-UI components, ready to drop into any project.
+
+| Template      | Description                                                                         | Status |
+| ------------- | ----------------------------------------------------------------------------------- | ------ |
+| **Login**     | Split-screen login with OAuth buttons, show/hide password, form validation          | ✅     |
+| **Dashboard** | Admin layout: collapsible Sidebar, KPI grid, DataTable transactions, Quick Actions  | ✅     |
+| **Settings**  | Tabbed settings: Profile, Account, Notifications, Appearance, Danger Zone + Dialog  | ✅     |
+| **Pricing**   | Pricing page: monthly/annual Switch, 3-tier cards, Check/X features, FAQ Accordion  | ✅     |
+
+```tsx
+// Import templates directly from the package
+import { Login, Dashboard, Settings, Pricing } from '@navi-ui/react'
+
+// Use as a full page
+export default function LoginPage() {
+  return <Login onFormSubmit={(values) => signIn(values)} />
+}
+```
 
 ---
 
@@ -336,6 +366,7 @@ navi-ui/
 │   │   ├── advanced/        # Progress, Skeleton, Accordion, Dialog, Drawer, Command, Stepper
 │   │   ├── theme/           # ThemeSwitcher
 │   │   └── index.ts         # Barrel exports
+│   ├── templates/           # Login, Dashboard, Settings, Pricing
 │   ├── hooks/               # useToast, useTheme, etc.
 │   ├── tokens/              # Design tokens, color definitions
 │   ├── theme/               # ThemeProvider, CSS variables
