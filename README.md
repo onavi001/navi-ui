@@ -16,7 +16,7 @@ _Built with React 19, TypeScript strict, Tailwind v4, and Radix UI primitives_
 
 <br/>
 
-[![npm version](https://img.shields.io/npm/v/@navi-ui/react?style=flat-square&color=0ea5e9&label=npm)](https://www.npmjs.com/package/@navi-ui/react)
+[![npm version](https://img.shields.io/npm/v/@onavi001/react?style=flat-square&color=0ea5e9&label=npm)](https://www.npmjs.com/package/@onavi001/react)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](./LICENSE)
 [![Storybook](https://img.shields.io/badge/Storybook-8.5-ff4785?style=flat-square&logo=storybook&logoColor=white)](http://localhost:6006)
@@ -24,7 +24,7 @@ _Built with React 19, TypeScript strict, Tailwind v4, and Radix UI primitives_
 
 <br/>
 
-[**GitHub**](https://github.com/onavi001/navi-ui) · [**npm**](https://www.npmjs.com/package/@navi-ui/react)
+[**GitHub**](https://github.com/onavi001/navi-ui) · [**npm**](https://www.npmjs.com/package/@onavi001/react)
 
 </div>
 
@@ -53,7 +53,7 @@ A production-ready component library built for teams who care about:
 
 ```bash
 # Install the package
-npm install @navi-ui/react
+npm install @onavi001/react
 
 # Tailwind CSS is a required peer dependency
 npm install -D tailwindcss@^4
@@ -66,7 +66,7 @@ npm install -D tailwindcss@^4
 ## Quick Start
 
 ```tsx
-import { Button, Card, Badge } from "@navi-ui/react";
+import { Button, Card, Badge } from "@onavi001/react";
 
 export default function Example() {
   return (
@@ -202,7 +202,7 @@ Full-page layouts built exclusively from Navi-UI components, ready to drop into 
 
 ```tsx
 // Import templates directly from the package
-import { Login, Dashboard, Settings, Pricing } from '@navi-ui/react'
+import { Login, Dashboard, Settings, Pricing } from '@onavi001/react'
 
 // Use as a full page
 export default function LoginPage() {
@@ -298,7 +298,7 @@ Dark mode is **automatic**. No configuration needed.
 
 ```tsx
 // The ThemeProvider handles everything
-import { ThemeProvider } from "@navi-ui/react";
+import { ThemeProvider } from "@onavi001/react";
 
 export default function App() {
   return (
@@ -320,7 +320,7 @@ All colors automatically switch when user prefers dark mode or when `.dark` clas
 100% typed with TypeScript 5.8 strict mode:
 
 ```tsx
-import { Button, ButtonProps } from "@navi-ui/react";
+import { Button, ButtonProps } from "@onavi001/react";
 
 // Intellisense for all props
 <Button
@@ -434,6 +434,6 @@ You're free to use, modify, and distribute this library. A ⭐ on the repo is ap
 
 **Built with ☕ and strict TypeScript — for developers who care about quality.**
 
-[GitHub](https://github.com/onavi001/navi-ui) · [npm](https://www.npmjs.com/package/@navi-ui/react) · [Storybook](http://localhost:6006)
+[GitHub](https://github.com/onavi001/navi-ui) · [npm](https://www.npmjs.com/package/@onavi001/react) · [Storybook](http://localhost:6006)
 
 </div>

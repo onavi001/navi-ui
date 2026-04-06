@@ -2,7 +2,7 @@
 
 ## Proyecto
 Navi-UI es una librería de componentes React enterprise-grade.
-Paquete: @navi-ui/react
+Paquete: @onavi001/react
 Stack: React 19 + TypeScript 5.8 strict + Tailwind v4 + Radix UI + Vite 6
 
 ## Reglas absolutas
