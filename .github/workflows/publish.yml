@@ -32,6 +32,7 @@ jobs:
           node-version: '22'
           registry-url: https://registry.npmjs.org
           scope: '@navi01'
+          always-auth: true
 
       # Cache node_modules for faster install.
       - name: Cache node_modules
