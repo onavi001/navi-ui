@@ -1,6 +1,6 @@
 {
   "name": "@navi01/react",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "Enterprise-grade accessible React components",
   "author": "Oscar Ivan",
   "license": "MIT",
@@ -34,6 +34,7 @@
       "import": "./dist/tailwind.js",
       "require": "./dist/tailwind.cjs"
     },
+    "./index.css": "./dist/tailwind.css",
     "./styles.css": "./dist/tailwind.css"
   },
   "files": [

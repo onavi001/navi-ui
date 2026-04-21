@@ -6,7 +6,7 @@ export type TabsVariant = "default" | "pills" | "underline";
 
 export type TabsOrientation = "horizontal" | "vertical";
 
-const Tabs = TabsPrimitive.Root;
+const TabsRoot = TabsPrimitive.Root;
 
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
@@ -72,5 +72,11 @@ const TabsContent = React.forwardRef<
   />
 ));
 TabsContent.displayName = TabsPrimitive.Content.displayName;
+
+const Tabs = Object.assign(TabsRoot, {
+  List: TabsList,
+  Trigger: TabsTrigger,
+  Content: TabsContent,
+});
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };

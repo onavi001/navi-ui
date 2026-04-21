@@ -5,6 +5,28 @@ All notable changes to `@navi01/react` are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.9] - 2026-04-21
+
+### Fixed
+
+- **Theme exports:** added `ThemeProvider` to public exports so `import { ThemeProvider } from "@navi01/react"` works.
+- **Compound API compatibility:** added static subcomponents for common usage patterns:
+  - `Tabs.List`, `Tabs.Trigger`, `Tabs.Content`
+  - `DropdownMenu.Trigger`, `DropdownMenu.Content`, `DropdownMenu.Item`, `DropdownMenu.Label`, `DropdownMenu.Separator`, `DropdownMenu.CheckboxItem`
+  - `Select.Trigger`, `Select.Value`, `Select.Content`, `Select.Item`
+- **Select backwards compatibility:** `Select` now supports both legacy `options` prop mode and compound children mode.
+
+[0.1.9]: https://github.com/onavi001/navi-ui/compare/v0.1.8...v0.1.9
+
+## [0.1.8] - 2026-04-21
+
+### Fixed
+
+- **Vite/Tailwind import compatibility:** added `./index.css` export mapped to `dist/tailwind.css` so existing apps using `@navi01/react/index.css` work under strict `exports`.
+- **Theme API:** added and exported `ThemeProvider` from `@navi01/react` so consumer apps can import it directly.
+
+[0.1.8]: https://github.com/onavi001/navi-ui/compare/v0.1.7...v0.1.8
+
 ## [0.1.7] - 2026-04-21
 
 ### Fixed

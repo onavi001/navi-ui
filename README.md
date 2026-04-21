@@ -88,6 +88,12 @@ Navi-UI styles are **not** bundled into the main JS entry: you load them once so
    import "@navi01/react/styles.css";
    ```
 
+   Backward compatible alias (if your project already uses it):
+
+   ```ts
+   import "@navi01/react/index.css";
+   ```
+
 That’s it for styling: the published CSS includes a Tailwind `@source` rule so classes used inside `@navi01/react` are picked up without extra configuration.
 
 ---
