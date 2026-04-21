@@ -29,3 +29,7 @@ storybook-static
 # Personal docs (never commit)
 PRIVATE_RELEASE_GUIDE.md
 STORYBOOK_ACTION_PLAN.md
+
+# npm publish: backup while README is inlined into package.json
+.package.json.navi-readme.bak
+*.tgz

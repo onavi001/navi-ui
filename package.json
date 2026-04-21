@@ -1,6 +1,6 @@
 {
   "name": "@navi01/react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Enterprise-grade accessible React components",
   "author": "Oscar Ivan",
   "license": "MIT",
@@ -59,6 +59,8 @@
     "release:minor": "bash ./scripts/release.sh minor",
     "release:major": "bash ./scripts/release.sh major",
     "prepublishOnly": "npm run build",
+    "prepack": "node scripts/npm-readme-inject.mjs",
+    "postpack": "node scripts/npm-readme-restore.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
