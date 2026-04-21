@@ -1,6 +1,6 @@
 {
   "name": "@navi01/react",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Enterprise-grade accessible React components",
   "author": "Oscar Ivan",
   "license": "MIT",
@@ -30,19 +30,26 @@
       "require": "./dist/index.cjs"
     },
     "./tailwind": {
+      "types": "./dist/tailwind.d.ts",
       "import": "./dist/tailwind.js",
       "require": "./dist/tailwind.cjs"
-    }
+    },
+    "./styles.css": "./dist/tailwind.css"
   },
   "files": [
     "dist",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css",
+    "./dist/tailwind.js",
+    "./dist/tailwind.cjs"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsup",

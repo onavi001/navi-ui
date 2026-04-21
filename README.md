@@ -51,21 +51,60 @@ A production-ready component library built for teams who care about:
 
 ## Installation
 
-```bash
-# Install the package
-npm install @navi01/react
+Install the library and its **peer dependencies** (React 19 and Tailwind CSS v4):
 
-# Tailwind CSS is a required peer dependency
+```bash
+npm install @navi01/react react react-dom
 npm install -D tailwindcss@^4
 ```
 
-**Peer dependencies:** `react >= 19`, `tailwindcss >= 4`
+**Peers:** `react >= 19`, `react-dom >= 19`, `tailwindcss >= 4`
+
+---
+
+## App setup (Vite + Tailwind v4)
+
+Navi-UI styles are **not** bundled into the main JS entry: you load them once so Tailwind can process `@import "tailwindcss"` and generate utilities used by the components.
+
+1. **Add the Tailwind Vite plugin** (same stack as this repo):
+
+   ```bash
+   npm install -D @tailwindcss/vite vite @vitejs/plugin-react
+   ```
+
+2. **Configure `vite.config.ts`:**
+
+   ```ts
+   import { defineConfig } from "vite";
+   import react from "@vitejs/plugin-react";
+   import tailwindcss from "@tailwindcss/vite";
+
+   export default defineConfig({
+     plugins: [react(), tailwindcss()],
+   });
+   ```
+
+3. **Load Navi-UI styles at the top of your app entry** (pick one):
+
+   ```ts
+   // Recommended: one line, works with Vite/Webpack/etc.
+   import "@navi01/react/tailwind";
+   ```
+
+   Or import the CSS file directly (same stylesheet, useful if you prefer a CSS-only entry):
+
+   ```ts
+   import "@navi01/react/styles.css";
+   ```
+
+That’s it for styling: the published CSS includes a Tailwind `@source` rule so classes used inside `@navi01/react` are picked up without extra configuration.
 
 ---
 
 ## Quick Start
 
 ```tsx
+import "@navi01/react/tailwind";
 import { Button, Card, Badge } from "@navi01/react";
 
 export default function Example() {

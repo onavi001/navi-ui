@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import './theme/variables.css';
 
+/* Scan this package’s built JS so utilities used by components are generated in the consumer app. */
+@source '.';
+
 html {
   font: 18px/145% var(--navi-font-sans);
   letter-spacing: 0.18px;
