@@ -1,6 +1,6 @@
 # Navi-UI
 
-<div align="center">
+**Enterprise-grade accessible React components** — React 19, TypeScript strict, Tailwind v4, Radix UI.
 
 ```
 ███╗   ██╗ █████╗ ██╗   ██╗██╗      ██╗   ██╗██╗
@@ -11,22 +11,13 @@
 ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═╝       ╚═════╝ ╚═╝
 ```
 
-**Enterprise-grade accessible React components**  
-_Built with React 19, TypeScript strict, Tailwind v4, and Radix UI primitives_
-
-<br/>
-
 [![npm version](https://img.shields.io/npm/v/@navi01/react?style=flat-square&color=0ea5e9&label=npm)](https://www.npmjs.com/package/@navi01/react)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](./LICENSE)
-[![Storybook](https://img.shields.io/badge/Storybook-8.5-ff4785?style=flat-square&logo=storybook&logoColor=white)](http://localhost:6006)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](https://github.com/onavi001/navi-ui/blob/main/LICENSE)
+[![Storybook](https://img.shields.io/badge/Storybook-10-ff4785?style=flat-square&logo=storybook&logoColor=white)](https://github.com/onavi001/navi-ui)
 [![a11y](https://img.shields.io/badge/WCAG-2.2%20AA-16a34a?style=flat-square)](https://www.w3.org/WAI/WCAG22/quickref/)
 
-<br/>
-
-[**GitHub**](https://github.com/onavi001/navi-ui) · [**npm**](https://www.npmjs.com/package/@navi01/react)
-
-</div>
+[GitHub](https://github.com/onavi001/navi-ui) · [npm](https://www.npmjs.com/package/@navi01/react)
 
 ---
 
@@ -469,10 +460,6 @@ You're free to use, modify, and distribute this library. A ⭐ on the repo is ap
 
 ---
 
-<div align="center">
+**Built with strict TypeScript — for developers who care about quality.**
 
-**Built with ☕ and strict TypeScript — for developers who care about quality.**
-
-[GitHub](https://github.com/onavi001/navi-ui) · [npm](https://www.npmjs.com/package/@navi01/react) · [Storybook](http://localhost:6006)
-
-</div>
+[GitHub](https://github.com/onavi001/navi-ui) · [npm](https://www.npmjs.com/package/@navi01/react) · [Storybook (dev)](https://github.com/onavi001/navi-ui/blob/main/.storybook)
